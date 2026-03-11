@@ -12,6 +12,17 @@ def extract_final_answer(answer_text: str) -> str:
         return match.group(1).strip()
     return answer_text.strip()
 
+def split_question_and_context(question_text: str):
+    sentences = re.split(r'(?<=[.!?])\s+', question_text.strip())
+
+    if len(sentences) == 1:
+        return "", sentences[0]
+    
+    context = " ".join(sentences[:-1])
+    question = sentences[-1]
+
+    return context, question
+
 def main():
 
     raw_path = Path("data/raw/gsm8k_test.jsonl")
@@ -30,11 +41,12 @@ def main():
     processed = []
 
     for i, row in enumerate(subset):
+        context, question = split_question_and_context(row["question"])
         processed.append({
             "id": f"gsm8k_{i}",
             "dataset": "gsm8k",
-            "question": row["question"],
-            "context": "",
+            "question": question,
+            "context": context,
             "answer": extract_final_answer(row["answer"])
         })
 
