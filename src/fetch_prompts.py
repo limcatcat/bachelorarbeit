@@ -4,11 +4,7 @@ from langfuse import get_client
 
 load_dotenv()
 
-langfuse = get_client(
-    public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
-    secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
-    host=os.getenv("LANGFUSE_BASE_URL"),
-)
+langfuse = get_client()
 
 def fetch_prompts(system_prompt_name: str, user_prompt_name: str, context: str, question: str) -> tuple[str, str]:
     system_prompt = langfuse.get_prompt(system_prompt_name)
