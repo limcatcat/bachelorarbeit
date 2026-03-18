@@ -12,7 +12,7 @@ load_dotenv()
 
 def load_jsonl(path: str) -> list[dict]:
     rows = []
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             rows.append(json.loads(line))
     return rows
@@ -21,25 +21,86 @@ def save_jsonl(path: str, rows: list[dict]) -> None:
     out_path = Path(path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(out_path, "w") as f:
+    with open(out_path, "w", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row) + "\n")
 
 
-@observe()
+@observe(name="qa_execution")
+def execute_qa(
+        row: dict,
+        i: int,
+        variant: str,
+        dataset_name: str,
+        model_name: str,
+        temperature: float,
+        output_name: str,
+) -> dict:
+       
+    VARIANT_DICT = {
+        "AF": "answer_first_system_prompt",
+        "RF": "reasoning_first_system_prompt",
+        "NR": "no_reasoning_system_prompt",
+    }
+     
+    context = row["context"]
+    question = row["question"]
+
+    system_prompt, user_prompt = fetch_prompts(
+        system_prompt_name=VARIANT_DICT[variant],
+        user_prompt_name="user_prompt",
+        context=context,
+        question=question,
+    )
+
+    with propagate_attributes(
+        tags=[f"{output_name}"],
+        metadata={
+            "row_index": str(i),
+            "sample_id": row.get("id"),
+            "variant": variant,
+            "dataset_name": dataset_name,
+            "model_name": model_name,
+            "temperature": str(temperature),
+        },
+    ):
+        response = openai.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=temperature,
+        )
+
+        llm_response = response.choices[0].message.content
+
+        result_row = {
+            "row_index": i,
+            "id": row.get("id"),
+            "dataset": row.get("dataset"),
+            "variant": variant,
+            "expected_answer": row.get("answer"),
+            "context": context,
+            "question": question,
+            "system_prompt_name": VARIANT_DICT[variant],
+            "user_prompt_name": "user_prompt",
+            "model_name": model_name,
+            "temperature": temperature,
+            "llm_response": llm_response
+        }
+
+        return result_row
+
+
+
 def run_experiment(
         dataset_path: str,
         variant: str,
         model_name: str,
         temperature: float = 0,
 ) -> tuple[pd.DataFrame, str]:
-    
-    VARIANT_DICT = {
-        "AF": "answer_first_system_prompt",
-        "RF": "reasoning_first_system_prompt",
-        "NR": "no_reasoning_system_prompt",
-    }
-    
+        
     data = load_jsonl(dataset_path)
 
     results = []
@@ -51,48 +112,19 @@ def run_experiment(
 
 
     for i, row in enumerate(data):
-        context = row["context"]
-        question = row["question"]
-
-        system_prompt, user_prompt = fetch_prompts(
-            system_prompt_name=VARIANT_DICT[variant],
-            user_prompt_name="user_prompt",
-            context=context,
-            question=question,
+        result_row = execute_qa(
+            row=row,
+            i=i,
+            variant=variant,
+            dataset_name=dataset_name,
+            model_name=model_name,
+            temperature=temperature,
+            output_name=output_name,
         )
 
-        with propagate_attributes(
-            tags=[f"{output_name}"]
-        ):
-            response = openai.chat.completions.create(
-                model=model_name,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=temperature,
-            )
+        results.append(result_row)
 
-            llm_response = response.choices[0].message.content
-
-            result_row = {
-                "row_index": i,
-                "id": row.get("id"),
-                "dataset": row.get("dataset"),
-                "variant": variant,
-                "expected_answer": row.get("answer"),
-                "context": context,
-                "question": question,
-                "system_prompt_name": VARIANT_DICT[variant],
-                "user_prompt_name": "user_prompt",
-                "model_name": model_name,
-                "temperature": temperature,
-                "llm_response": llm_response
-            }
-
-            results.append(result_row)
-
-            print(f"Processed row {i+1}/{len(data)}")
+        print(f"Processed row {i+1}/{len(data)}")
 
     return pd.DataFrame(results), output_name
 
