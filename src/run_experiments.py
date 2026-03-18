@@ -1,30 +1,13 @@
 from fetch_prompts import fetch_prompts
 from langfuse.openai import openai
 from langfuse import observe, propagate_attributes
-import os
-import json
 from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 import argparse
+from utils import load_jsonl, save_jsonl, get_unique_path
 
 load_dotenv()
-
-def load_jsonl(path: str) -> list[dict]:
-    rows = []
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            rows.append(json.loads(line))
-    return rows
-
-def save_jsonl(path: str, rows: list[dict]) -> None:
-    out_path = Path(path)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    with open(out_path, "w", encoding="utf-8") as f:
-        for row in rows:
-            f.write(json.dumps(row) + "\n")
-
 
 @observe(name="qa_execution")
 def execute_qa(
@@ -149,8 +132,8 @@ def main():
     Path("results/tables").mkdir(parents=True, exist_ok=True)
     Path("results/raw_runs").mkdir(parents=True, exist_ok=True)
 
-    csv_path = f"results/tables/{output_name}.csv"
-    jsonl_path = f"results/raw_runs/{output_name}.jsonl"
+    csv_path = get_unique_path(f"results/tables/{output_name}.csv")
+    jsonl_path = get_unique_path(f"results/raw_runs/{output_name}.jsonl")
 
     df.to_csv(csv_path, index=False)
 
