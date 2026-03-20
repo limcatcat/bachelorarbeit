@@ -1,3 +1,4 @@
 .env
 src/test.ipynb
 data/processed/gsm8k_test_seed42_n300_no_context.jsonl
+run.sh

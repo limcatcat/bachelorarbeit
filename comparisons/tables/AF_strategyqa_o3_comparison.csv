@@ -1,0 +1,935 @@
+row_index,id,dataset,variant,expected_answer,context,question,system_prompt_name,user_prompt_name,model_name,temperature,llm_response,llm_answer,answer_match
+0,strategyqa_0,strategyqa,AF,False,The average age of a US third grader is 8. Guitar Hero is recommended for ages 7 and up. The Beatles were a British rock band with a plethora of radio friendly hits.,Is Guitar Hero Beatles inappropriate for a US third grader?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The average third grader is 8, which is above Guitar Hero’s recommended minimum age of 7, and Beatles music is generally considered family-friendly. Therefore the game is suitable, not inappropriate, for a US third grader.",false,True
+1,strategyqa_1,strategyqa,AF,True,"Dragon Ball has 6 TV series, 3 TV specials, and 2 direct to video spinoffs as of 2020. Friday the 13th has 12 movies in the franchise and 1 TV series as of 2020.",Does Dragon Ball shows and movies fall short of Friday 13th number of projects?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Dragon Ball projects: 6 TV series + 3 TV specials + 2 direct-to-video spinoffs = 11  
+Friday the 13th projects: 12 movies + 1 TV series = 13  
+Since 11 < 13, Dragon Ball has fewer projects, so it falls short of Friday the 13th total.",true,True
+2,strategyqa_2,strategyqa,AF,True,"During the 1930s, Mercedes-Benz produced the 770 model. The 770 was popular with Nazis, and Adolf Hitler used them as his personal vehicle.",Was Mercedes-Benz associated with the Nazis?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that the Mercedes-Benz 770 was popular with Nazis and that Adolf Hitler used it as his personal vehicle, demonstrating a direct connection between Mercedes-Benz and the Nazi leadership; therefore, Mercedes-Benz was associated with the Nazis.",true,True
+3,strategyqa_3,strategyqa,AF,True,Chives grow upwards in thin green cylindrical shoots.  Grass grows upwards in thin green flat shoots.,Could chives be mistaken for grass?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Both plants emerge as narrow, green, upright shoots. To an observer who does not notice the cross-section (cylindrical vs flat), the overall color and form are similar enough that chive shoots could be misidentified as grass.",true,True
+4,strategyqa_4,strategyqa,AF,True,Kidney stones are hard mineral deposits that can form in the kidneys. The largest kidney stone ever recorded was 13 cm wide. The diameter of a quarter is 2.4 cm.,Can a quarter fit inside of a human kidney?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The kidney has been documented to contain a stone 13 cm in diameter, far larger than a quarter’s 2.4 cm diameter, showing that an object the size of a quarter can easily fit inside a human kidney.",true,True
+5,strategyqa_5,strategyqa,AF,True,"Hugh Henry Brackenridge founded University of Pittsburgh in 1787. Judith Sheindlin is a judge, lawyer, and author. Hugh Henry Brackenridge was a writer, lawyer, judge, and Justice of the Supreme Court of Pennsylvania.",Did University of Pittsburgh founder have great deal in common with Judith Sheindlin?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Hugh Henry Brackenridge, the founder of the University of Pittsburgh, was a lawyer, judge, and writer. Judith Sheindlin is also a lawyer, judge, and author. Because they share multiple professional roles—lawyer, judge, and writer/author—they indeed have a great deal in common.",true,True
+6,strategyqa_6,strategyqa,AF,False,"Ronda Rousey is a mixed martial artist and wrestler. Ronda Rousey relies on striking moves and submission tactics to dominate her opponents. X-Men's Colossus has the ability to change his appearance. Colossus's mutation allows him to create an organic steel layer, that acts as an impenetrable external shell.",Will Ronda Rousey hypothetically defeat X-Men's Colossus in a fight?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Colossus can transform his entire body into organic steel, granting him vast super-human strength and near-invulnerability. Ronda Rousey, while an elite human martial artist, relies on strikes and joint locks that work on normal physiology. Against an opponent whose exterior is an impenetrable metal shell and who can effortlessly outmatch her in strength, her techniques would have no effect, and she could neither injure nor restrain him. Therefore, in a hypothetical fight, she would not be able to defeat Colossus.",false,True
+7,strategyqa_7,strategyqa,AF,True,"Queen Elizabeth the Queen Mother gave birth to Queen Elizabeth II in 1926. The Tudor dynasty had a number of Queens including: Mary I of England, Elizabeth I of England, and Margaret Tudor, Queen of Scots.",Did Queen Elizabeth The Queen Mother and her daughter share name with Tudor queen?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Both Queen Elizabeth The Queen Mother and her daughter Queen Elizabeth II bear the name Elizabeth, which is the same name as Elizabeth I, a queen from the Tudor dynasty. Therefore, they share their name with a Tudor queen.",true,True
+8,strategyqa_8,strategyqa,AF,False,"The earliest written records indicate the Egyptians and Babylonians used all the elementary arithmetic operations as early as 2000 BC. Neanderthals are an extinct species or subspecies of archaic humans who lived in Eurasia until about 40,000 years ago.",Did Neanderthals use arithmetic?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Neanderthals became extinct around 40 000 years ago, long before the earliest evidence of arithmetic, which appears in written records from Egyptians and Babylonians about 2000 BC. Since there is no indication that Neanderthals practiced arithmetic, they did not use it.",false,True
+9,strategyqa_9,strategyqa,AF,True,Abdulqawi Yusuf is the current president of the International Court of Justice The International Court of Justice is headquartered in The Hague,Does Abdulqawi Yusuf go to the Hague on a typical work day?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Abdulqawi Yusuf’s job is to preside over the International Court of Justice, whose offices and courtroom are located in The Hague. Since the ICJ is headquartered there, performing his regular duties requires his presence at that location, so on a normal workday he would go to The Hague.",true,True
+10,strategyqa_10,strategyqa,AF,False,Fair trade is a term used with sustainable development focusing on agricultural production Laptops are consumer electronics,Can you buy a fair trade laptop?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Fair trade certification programs are designed for goods such as coffee, cocoa, and other agricultural products. Laptops are consumer electronics, a sector where fair-trade standards and certifications do not currently exist. Therefore, a laptop cannot be purchased as a fair-trade product.",false,True
+11,strategyqa_11,strategyqa,AF,True,"The national flag of the Republic of Azerbaijan is a horizontal tricolour featuring three equally sized fesses of blue, red, and green Each of the Powerpuff Girls creates a trail of a different color when she flies: Bubbles makes blue, Blossom makes red, and Buttercup makes green.",Could the Powepuff Girls make the background to the Azerbaijani flag?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Azerbaijani flag consists of three horizontal stripes colored blue, red, and green. Bubbles produces a blue trail, Blossom a red trail, and Buttercup a green trail. Since their flight trails exactly match the three required colors, together they could lay down those three stripes and thus create the flag’s background.",true,True
+12,strategyqa_12,strategyqa,AF,False,Palm Beach has a total area of 8.12 square miles. The average palm is around 3 inches in length. There are 63360 inches in a mile.,Could Palm Beach be held in the palm of your hand?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A palm of a hand is about 3 in by 3 in ≈ 9 square inches.  
+1 sq mile = 63 360 in × 63 360 in ≈ 4.0 × 10⁹ sq in.  
+Palm Beach is 8.12 sq mi, so its area is 8.12 × 4.0 × 10⁹ ≈ 3.3 × 10¹⁰ sq in (about 33 billion sq in).  
+33 billion sq in ÷ 9 sq in ≈ 3.6 billion.  
+Palm Beach is billions of times larger than the area of a human palm, so it certainly cannot be held in your hand.",false,True
+13,strategyqa_13,strategyqa,AF,True,"A hound is a type of hunting dog used to track prey. Hounds include Basenjis, Dachsunds, and Beagles, among others. Snoopy is the dog in the Charlie Brown movies and books. Snoopy is a Beagle.","Was animal in You're a Good Sport, Charlie Brown, hypothetically a hound?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Snoopy appears in the special “You're a Good Sport, Charlie Brown.” The context states that Snoopy is a Beagle, and Beagles are listed as a type of hound. Therefore the animal in the special would indeed be classified as a hound.",true,True
+14,strategyqa_14,strategyqa,AF,False,Al-Farabi was born in 872 AD. Mohammed died in 832 AD.,Did Al-Farabi ever meet Mohammed?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Al-Farabi’s birth year (872 AD) is four decades after Mohammed’s death year (832 AD). Since Mohammed had already died before Al-Farabi was born, their lives did not overlap, making it impossible for them to have met.",false,True
+15,strategyqa_15,strategyqa,AF,False,"Chewing is the act of breaking down solid objects with your teeth Under normal conditions, argon exists as a gas",Can you chew argon?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Chewing requires a solid object to be broken down by teeth. Argon is normally a gas, not a solid, so there is nothing solid to chew.",false,True
+16,strategyqa_16,strategyqa,AF,False,Carl Friedrich Gauss was born in 1777. Speaking to someone 100 miles away requires a telephone. The telephone was invented in 1876.,Could Carl Friedrich Gauss speak to someone 100 miles away?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Speaking to someone 100 miles away required a telephone, but the telephone was not invented until 1876. Carl Friedrich Gauss lived from 1777 to 1855, so he died before the invention existed. Therefore he could not have spoken to someone 100 miles away.",false,True
+17,strategyqa_17,strategyqa,AF,True,"The Hobbit is a 95,356 word book by J.R.R. Tolkien. Speed reader Howard Stephen Berg could read at the speed of 25,000 words per minute. Speed reader Maria Teresa Calderon from the Philippines claimed to be able to read 80,000 words per minute with 100% comprehension.",Can The Hobbit be read in its entirety in four minutes?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Hobbit has 95356 words. To finish it in 4 minutes you must read 95356 ÷ 4 ≈ 23839 words per minute. Howard Stephen Berg’s documented rate is 25000 wpm, which exceeds 23839 wpm, and Maria Teresa Calderon’s claimed rate is far higher. Therefore, at such speeds the entire book can indeed be read within four minutes.",true,True
+18,strategyqa_18,strategyqa,AF,True,"Olaf is a popular character in Disney's Frozen series. Olaf is a snowman, accidentally enchanted to life by Elsa while she magically builds her ice tower.",Is there a popular Disney character made from living ice?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Olaf is a well-known Disney character who is a snowman magically brought to life; as a being composed of snow/ice that is alive, he fits the description of a popular Disney character made from living ice.",true,True
+19,strategyqa_19,strategyqa,AF,True,The Rowe 550 was a car produced by the Chinese SAIC motor company. The Rowe 550 debuted at the 2007 Shanghai Auto Show. The 2008 Beijing Summer Olympics happened in the Capital of the People's Republic of China.,Could you drive a Rowe 550 to the 2008 Summer Olympics?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Roewe 550 was unveiled and available by 2007, a year before the 2008 Beijing Olympics, so one could have owned or accessed the car in time and driven it to Beijing for the Games.",true,True
+20,strategyqa_20,strategyqa,AF,False,"Reiki practitioners use a technique called palm healing or hands-on healing through which a ""universal energy"" is said to be transferred through the palms of the practitioner to the patient in order to encourage emotional or physical healing. Medications are typically stored in pill bottles.",Can Reiki be stored in a bottle?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Reiki is described as a form of healing energy that practitioners channel through their hands during a session; it is not a physical substance. Because it has no material form like pills or liquids, it cannot be contained or stored in a bottle.",false,True
+21,strategyqa_21,strategyqa,AF,False,"The 2018 population of Ashland Oregon was 21,263 people. The number of soldiers in a military division is between 10,000 and 25,000 people.","Is 2018 Ashland, Oregon population inadequate to be a hypothetical military division?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A military division typically contains 10,000–25,000 soldiers. Ashland’s 2018 population was 21,263, which lies within this range, so it would be sufficient, not inadequate, to represent a division.",false,True
+22,strategyqa_22,strategyqa,AF,False,"Goblin sharks are carnivores that subsist on other fish, cephalopods and crustaceans Crossroads Kitchen is a vegan restaurant in Los Angeles Vegans do not consume any animal products",Would a goblin shark eat at Crossroads Kitchen?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Goblin sharks need animal prey such as fish, cephalopods, and crustaceans, while Crossroads Kitchen serves only plant-based food with no animal products. Therefore the goblin shark would find nothing it can eat there.",false,True
+23,strategyqa_23,strategyqa,AF,True,"Harry Potter and the Philosopher's Stone was a 1997 children's fantasy book. The Albanian Civil War, also called the Albanian Civil Unrest, happened in 1997.",Did children read Harry Potter and the Philosopher's Stone during the Albanian Civil War?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Harry Potter and the Philosopher's Stone was published in 1997, and the Albanian Civil War also took place in 1997. Because the book was available during the same year the conflict occurred, it was possible for children (whether in Albania or elsewhere) to read it during that period. Therefore, children could have been reading the book while the Albanian Civil War was ongoing.",true,True
+24,strategyqa_24,strategyqa,AF,False,"An intellectual disability is reflected in below-average IQ and a lack of skills needed for daily living. Learning disabilities are weaknesses in certain academic skills. usually, Reading, writing and math. Dyslexia is characterized by difficulties with accurate and/or fluent word recognition and by poor spelling and decoding abilities. Thomas Jefferson, George Washington, and John F. Kennedy were successful presidents while being dyslexic.",Is dyslexia the most common intellectual disability in US?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Dyslexia is a learning disability, not an intellectual disability, and therefore cannot be the most common intellectual disability in the US.",false,True
+25,strategyqa_25,strategyqa,AF,False,Some types of pottery glaze are unsafe for contact with food meant for human consumption.  Antique pottery pieces may have hazardous levels of lead in them.,Are all types of pottery safe to cook in?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context explains that certain glazes used on pottery, especially antique pieces, can contain hazardous levels of lead and are therefore unsafe for food contact. Since at least some pottery is unsafe, it follows that not all types of pottery are safe to cook in.",false,True
+26,strategyqa_26,strategyqa,AF,True,"The Great Pyramid of Giza is classified as one of the Seven Wonders of the Ancient World. Five of the ancient wonders were destroyed, and a sixth (the Hanging Gardens of Babylon) may not have existed. The Great Pyramid of Giza is largely intact as of 2020.",Is Great Pyramid of Giza the last wonder of its kind?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+According to the context, of the Seven Wonders of the Ancient World five were destroyed and one may never have existed, leaving only the Great Pyramid of Giza still largely intact; therefore it is the sole remaining wonder of that list, making the statement true.",true,True
+27,strategyqa_27,strategyqa,AF,False,"The Supreme Court is the highest court in the USA. Simon Cowell is a British talent competition judge. Members of the Supreme Court are appointed, rather than elected.",Can Simon Cowell vote for the next Supreme Court judge?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Supreme Court justices are appointed, not elected, so no one—including Simon Cowell—casts a vote to choose them.",false,True
+28,strategyqa_28,strategyqa,AF,True,Amtrak is a transportation service. Amtrak transports people with trains and buses. A bus is a four wheel vehicle. ,Does Amtrak operate four wheel vehicles?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that Amtrak transports people with buses. It also states that a bus is a four-wheel vehicle. Therefore, because Amtrak uses buses, it indeed operates four-wheel vehicles.",true,True
+29,strategyqa_29,strategyqa,AF,False,Durian is a plant type that produces several kinds of fruit. Olfactory refers to the human sense of smell. Pleasant smells according to polls include flowers and sweet foods. Durian fruits have been banned in Singapore due to its overwhelming smell.,Are Durian fruits an olfactory delight?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Because durian’s odor is so strong that the fruit is banned in public places in Singapore, it is not regarded as a pleasant smell; therefore, it cannot be considered an olfactory delight.",false,True
+30,strategyqa_30,strategyqa,AF,True,Beaver dams often lead to flooding in the areas around them. Flooding can lead to loosening of the soil. Loosened soil can cause trees to fall over.  Flooding can lead to soil erosion.,Does the land in close proximity to beaver dams suffer?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that beaver dams cause nearby flooding; flooding loosens soil, leads to trees falling, and causes soil erosion. These negative consequences indicate harm to the surrounding land, so the land in close proximity does indeed suffer.",true,True
+31,strategyqa_31,strategyqa,AF,True,The Portuguese Colonial War was between Portugal and several groups including People's Movement for Liberation of Angola. Switzerland remained neutral in World War II and did not get involved. Portugal stayed out of world affairs during World War II.,Did any country in Portuguese Colonial War share Switzerlands role in WWII?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Switzerland’s role in WWII was one of neutrality and non-involvement. The context states that Portugal, which was one of the belligerents in the Portuguese Colonial War, also “stayed out of world affairs during World War II,” i.e., maintained neutrality. Therefore at least one country involved in the Portuguese Colonial War—Portugal—shared Switzerland’s neutral stance in WWII.",true,True
+32,strategyqa_32,strategyqa,AF,True,The first step in removing the skin from at tomato is to quickly submerge it in boiling water. The second step in removing the skin from a tomato is to take the tomatoes out of the boiling water and put them into ice water.,Do you need both hot and cold water to peel a tomato?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+According to the context, peeling a tomato involves two sequential steps: first submerging it in boiling (hot) water, then transferring it to ice (cold) water. Since both hot and cold water are required steps in the process, you indeed need both to peel a tomato.",true,True
+33,strategyqa_33,strategyqa,AF,False,The saltwater crocodile is native to saltwater habitats and brackish wetlands from India's east coast across Southeast Asia and the Sundaic region to northern Australia and Micronesia. Memphis is a city in the United States.,Would you take a photo of a Saltwater crocodile in Memphis?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Saltwater crocodiles occur naturally only from India through Southeast Asia to northern Australia and Micronesia; they are not native to the United States. Since Memphis is in the U.S., you would not encounter a saltwater crocodile there in the wild, so you would not take its photo in that location.",false,True
+34,strategyqa_34,strategyqa,AF,False,Queen Elizabeth II is the monarch of the United Kingdom and its commonwealth The Balearic Islands are part of the country of Spain,Does Elizabeth II reign over the Balearic Islands?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Elizabeth II is monarch only of the United Kingdom and its Commonwealth realms. The Balearic Islands belong to Spain, not to the UK or any Commonwealth realm, so she does not reign over them.",false,True
+35,strategyqa_35,strategyqa,AF,False,"Michael J Fox has Parkinson's disease.  Parkinson's disease is a brain disorder that leads to shaking, stiffness, and difficulty with walking, balance, and coordination. To qualify for the Army Rangers,  you must complete a 12-mile march with a 35-pound rucksack and weapon in less than three hours.",Would Michael J Fox qualify for the Army Rangers?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Parkinson’s disease causes tremors, muscle rigidity, and problems with walking, balance, and coordination. These symptoms make it extremely unlikely that Michael J Fox could complete a strenuous 12-mile march carrying 35 lb in under three hours, a prerequisite for Army Ranger qualification. Therefore, he would not qualify.",false,True
+36,strategyqa_36,strategyqa,AF,True,"Walt Disney won a total of 26 Academy Awards. The founder of Six Flags, Angus G Wynne, had 0 academy awards. The founder of Knott's Berry Farm, Walter Knott, had 0 academy awards.",Walt Disney dominated his amusement park peers at Academy Awards?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Walt Disney received 26 Academy Awards, whereas his fellow amusement-park founders Angus G. Wynne and Walter Knott each received none; therefore, Disney vastly outperformed—or “dominated”—his peers in terms of Academy Awards.",true,True
+37,strategyqa_37,strategyqa,AF,False,Heracles killed his children by his first wife Megara. They were not returned to life prior to his death.,Were all of Heracles's children present for his funeral pyre?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Heracles had already killed the children he had with Megara and they were never resurrected. Since those children were dead, they could not have been present when Heracles mounted his own funeral pyre, so not all of his children were there.",false,True
+38,strategyqa_38,strategyqa,AF,True,"Tenzing Norgay was a mountaineer that climbed Mount Everest in 1953. Snowdon Mountain has a peak of 3,560 feet. Mount Everest has a peak of over 29,000 feet.",Would Snowdon mountain be a piece of cake for Tenzing Norgay?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Tenzing Norgay successfully climbed Mount Everest, a peak over 29,000 feet high. Snowdon’s summit is only 3,560 feet, far lower and considerably less demanding in altitude, technical difficulty, and overall challenge. Since he achieved the far greater feat of summiting Everest, climbing Snowdon would almost certainly be trivial for him—hence a “piece of cake.”",true,True
+39,strategyqa_39,strategyqa,AF,False,Steve Carell plays Michael Scott on The Office. Michael Scott is a clueless and naive character that is not meant to be seen as effective in his job as General Manager.,Is Steve Carell's character on The Office portrayed as one with tremendous leadership skills?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that Michael Scott, played by Steve Carell, is a clueless and naive character who is not meant to be seen as effective in his job. This contradicts the idea that he is portrayed as having tremendous leadership skills, so the correct response is false.",false,True
+40,strategyqa_40,strategyqa,AF,True,"Leap years occur every four years. In American society, a bachelor's degree takes about four years.","In American society, will a bachelor's degree often include a leap year?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A leap year occurs once every four years, and a bachelor’s program lasts about four years. No matter which calendar year the program starts, the four-year span will include at least one of the regularly recurring leap years (e.g., starting in 2021 will include 2024). Therefore, a bachelor’s degree will typically encompass a leap year.",true,True
+41,strategyqa_41,strategyqa,AF,False,Lenovo's native name is 联想集团有限公司. Someone who is monolingual only speaks one language. The typical monolingual American would only be able to read English. Someone who can only read English is therefore unable to read Chinese.,Could a monolingual American read Lenovo's native name?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A monolingual American can only read English, and Lenovo's native name is written in Chinese characters (联想集团有限公司). Therefore, they would be unable to read it.",false,True
+42,strategyqa_42,strategyqa,AF,False,The Beatles were active from 1960 until 1969. Disco began to appear around 1972.,Did the Beatles write any music in the Disco genre?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Beatles disbanded in 1969, several years before disco emerged around 1972, so they could not have written music in the disco genre.",false,True
+43,strategyqa_43,strategyqa,AF,False,"Oscar Wilde was imprisoned for sexual indecency that amounted to having sexual relations with another man. In the United States, being gay is not a punishable offense. ",Was Oscar Wilde's treatment under the law be considered fair in the US now?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Oscar Wilde was jailed for consensual homosexual acts; in the contemporary United States homosexuality is legal and protected by constitutional rights. Therefore, such imprisonment would be viewed as unjust, so his treatment would not be considered fair today in the US.",false,True
+44,strategyqa_44,strategyqa,AF,False,"Donatello died on December 13, 1466. The first smartphone did not come out until 1992.",Did Donatello use a smartphone?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Donatello died in 1466, more than 500 years before the first smartphone appeared in 1992, so he could not have used one.",false,True
+45,strategyqa_45,strategyqa,AF,True,"Cattle are often slaughtered for meat and other products, like leather. Drums are often made with leather.",Would a cattle farmer be useful to a drum maker?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Drum makers need leather for drum heads, and cattle farmers supply hides that can be tanned into leather, so the farmer provides a necessary material, making them useful to the drum maker.",true,True
+46,strategyqa_46,strategyqa,AF,True,The Spice Girls is a five woman musical group from Britain. The Tata Hexa is a car with 6 and 7 seat capacities.,Tata Hexa can accomodate every Spice Girl?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Spice Girls comprise 5 members, while the Tata Hexa offers seating for either 6 or 7 occupants. Since 5 is less than both 6 and 7, the vehicle has enough seats to accommodate every Spice Girl.",true,True
+47,strategyqa_47,strategyqa,AF,True,"God made Eve from a bone he removed from Adam. Since Eve was made from Adam, they would have had similar DNA and been considered twins or at least siblings. As the only humans at the time, they ended up starting a family together.",Was Eve involved in an incestuous relationship?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Incest is defined as sexual relations between close relatives such as siblings. The context states that Eve was created directly from Adam’s bone, giving them essentially the same DNA and making them sibling-like. Since they then engaged in sexual relations to start the human family, this fits the definition of an incestuous relationship.",true,True
+48,strategyqa_48,strategyqa,AF,True,"The range of gray seals is limited to parts of the northern hemisphere bordered by the Atlantic ocean The subject of Moby Dick was a sperm whale Sperm whales can be found in the north Atlantic, in addition to most other bodies of water on earth.",Can a grey seal swim in the same water as the subject of Moby Dick?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The subject of Moby Dick is a sperm whale, which lives in the North Atlantic. Grey seals inhabit regions of the northern hemisphere that border the Atlantic Ocean, including the North Atlantic. Since both grey seals and sperm whales occupy the North Atlantic, a grey seal can indeed swim in the same waters as the sperm whale.",true,True
+49,strategyqa_49,strategyqa,AF,False,Bees with barbed stingers lose the barb after attacking a victim and die soon afterwards Bumblebees do not have barbed stingers and can sting multiple times without dying,Are aggressive bumblebees suicidal?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Bumblebees have smooth, unbarbed stingers, so when they sting they do not leave the stinger behind and do not die afterward. Therefore their aggressive stinging behavior is not self-destructive or suicidal.",false,True
+50,strategyqa_50,strategyqa,AF,True,Colloidal silver is a popular alternative treatment/home remedy that is used by some people. Ingestion of colloidal silver in high amounts can tint the skin blue.,Do some home remedies result in your skin color turning blue?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that colloidal silver is “a popular alternative treatment/home remedy” and that ingesting it “can tint the skin blue.” Therefore, at least one home remedy can cause the skin to turn blue, so the answer is true.",true,True
+51,strategyqa_51,strategyqa,AF,True,"The creator of Futurama is Matt Groening. Matt Groening was born in 1954. The 20th (twentieth) century was a century that began on January 1, 1901 and ended on December 31, 2000. The 21st (twenty-first) century began on January 1, 2001, and will end on December 31, 2100.",Has the creator of Futurama lived in multiple centuries?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Matt Groening was born in 1954, so he lived from 1954 to 2000 in the 20th century. He has also been alive since 2001 in the 21st century. Therefore, he has lived in more than one century.",true,True
+52,strategyqa_52,strategyqa,AF,True,"""Special brownies"" typically refer to brownies that have been laced with THC. THC is an active component of cannabis, a drug meant for adults only.","Should children be kept from ""special brownies""?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Special brownies contain THC, the psychoactive substance in cannabis, which is intended only for adults. Exposure to THC can harm children’s developing brains and is illegal for minors. Therefore, children should indeed be kept away from such brownies.",true,True
+53,strategyqa_53,strategyqa,AF,True,The character of James Bond has been played by numerous actors.  The character of The Doctor from Doctor Who has been played by many actors.,Do the James Bond and Doctor Who series have a similarity in format?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Both James Bond and Doctor Who employ the same narrative device: the main protagonist remains the same fictional individual while different actors assume the role over time, allowing the long-running series to continue without rebooting the storyline.",true,True
+54,strategyqa_54,strategyqa,AF,False,"McGruff was an animated dog spokesman for the National Crime Prevention Council. McGruff's slogan was, ""Take a bite out of crime."" Mike Tyson was disqualified in a 1997 boxing bout against Evander Holyfield for taking a bite out of his ear.",Did Mike Tyson do something very different than McGruff's slogan to Evander Holyfield in 1997?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+McGruff’s slogan “Take a bite out of crime” is a figurative call to fight crime, while Mike Tyson literally bit Evander Holyfield’s ear during their 1997 bout, an act very different from the slogan’s figurative meaning.",true,False
+55,strategyqa_55,strategyqa,AF,False,"John Kerry is an American citizen and politician Only citizens of the UK, Ireland or a Commonwealth nation are eligible to run in the United Kingdom general elections",Did John Kerry run in the 2010 United Kingdom general election?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+John Kerry is an American citizen. Eligibility rules state that only citizens of the UK, Ireland, or a Commonwealth country can run in UK general elections. Since he does not meet these citizenship criteria, he could not and did not run in the 2010 United Kingdom general election.",false,True
+56,strategyqa_56,strategyqa,AF,False,The Doctor grew up on a planet called Gallifrey. The planet Gallifrey was destroyed in a time war. The Doctor's ship doesn't require docking.,Does The Doctor keep his ship in his childhood home?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Doctor’s childhood home was on Gallifrey, but Gallifrey was destroyed; moreover, his ship does not need a docking place. Therefore, he does not keep his ship in his childhood home.",false,True
+57,strategyqa_57,strategyqa,AF,False,"When milk is non-homogenized, the cream will separate and rise to the top. Most store bought milk is homogenized. ",Does store bought milk have cream at the top?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The cream rises only in non-homogenized milk; most store-bought milk is homogenized, so in those cartons the cream does not separate and sit at the top.",false,True
+58,strategyqa_58,strategyqa,AF,False,"An executive order is a means of issuing federal directives in the United States, used by the president of the United States. To serve as president of the United States, one must be a natural-born citizen of the United States. John Key was born in Auckland, New Zealand.",Could John Key issue an executive order in the USA?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Only the president of the United States can issue an executive order. To become president one must be a natural-born U.S. citizen. John Key was born in Auckland, New Zealand, so he is not a natural-born U.S. citizen, cannot become president, and therefore cannot issue an executive order in the USA.",false,True
+59,strategyqa_59,strategyqa,AF,False,The crucifix is a symbol of Christianity The vast majority of Pakistan's population is Muslim,Are you likely to find a crucifix in Karachi?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Karachi is a city in Pakistan, where the overwhelming majority of people are Muslim, and Christian symbols such as crucifixes are uncommon. Therefore, encountering a crucifix there is not likely.",false,True
+60,strategyqa_60,strategyqa,AF,False,"When originally built, the Great Pyramids had a thin surface of limestone covering the bricks, making them shine in the sun. Over the centuries, the limestone layer has been removed by thieves and erosion, exposing the more common stone bricks underneath.",Do the Egyptian pyramids look the same from outside as they did when new?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Originally the pyramids were covered with a smooth casing of white limestone that made them gleam, but most of this outer layer has been stripped away or eroded, so today only the rough inner stone blocks are visible; therefore their exterior appearance is different from when they were new.",false,True
+61,strategyqa_61,strategyqa,AF,False,"Gray whales are, on average, 39ft long. The average above ground pool is 10-33ft in diameter. ",Would a Gray Whale fit easily in an above ground pool?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A gray whale averages 39 ft in length, while an above-ground pool is typically 10–33 ft in diameter. Since 39 ft exceeds the maximum 33 ft width of the pool, the whale’s body would be longer than the pool’s widest measurement, meaning it would not fit easily.",false,True
+62,strategyqa_62,strategyqa,AF,True,"Warner Bros. distributes several movie franchises including The Matrix, Harry Potter, and The Dark Knight. The Matrix had 2 sequels. Harry Potter had 7 sequels and several spin-offs. Harry Potter and the Deathly Hallows – Part 2 is Warner Bros. highest grossing film worldwide with a box office gross of $1,342,932,398.",Was Harry Potter a better investment than The Matrix for Warner Bros.?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Harry Potter generated more content (7 sequels and additional spin-offs) and includes Warner Bros.’ single highest-grossing film, whereas The Matrix produced only two sequels and none of its installments are cited as the studio’s top earner. The evidence shows the Harry Potter franchise has brought in greater box-office revenue, indicating it was the better investment for Warner Bros.",true,True
+63,strategyqa_63,strategyqa,AF,False,The next presidential elections will take place in November of 2020 Elijah Cummings passed away in October of 2019,Will Elijah Cummings vote for Joe Biden in the next presidential elections?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Elijah Cummings died in October 2019, which is before the November 2020 presidential election. Being deceased, he cannot cast a vote, so he will not vote for Joe Biden in that election.",false,True
+64,strategyqa_64,strategyqa,AF,False,"Brown rice is more expensive than white rice.  Most store bought rice pudding is white in color. Brown rice, when cooked, is light brown in color.",Is most store bought rice pudding made with brown rice?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Most store-bought rice pudding is described as white in color, whereas cooked brown rice is light brown. If the pudding were made mainly with brown rice it would have a brownish tint, not white. Therefore, most store-bought rice pudding is not made with brown rice.",false,True
+65,strategyqa_65,strategyqa,AF,True,Glass vibrates at its resonant frequency which is around a middle C note. Kelly Clarkson has an impressive three octave vocal range. Kelly Clarkson's Never Enough is in the key of A-flat. A-flat is above middle C in terms of notes.,Would Kelly Clarkson's voice shake glass?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Glass resonates most strongly when excited exactly at its natural frequency, about middle C.  “Never Enough” is sung in A-flat, a semitone above that frequency, so the notes she sustains in that song would not match the glass’s resonant pitch.  Even though Clarkson’s three-octave range includes middle C, the performance in question does not employ that specific note, and without matching pitch (and very high volume) her voice would not set the glass into resonance, so it would not shake.",false,False
+66,strategyqa_66,strategyqa,AF,False,Harvey Milk was a human being. Cows are not human beings. Only human beings can produce offspring which are also human beings.,Could a cow produce Harvey Milk?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Harvey Milk is a human being. The rule states that only human beings can produce offspring who are also human beings. Since a cow is not a human being, it cannot produce a human offspring; therefore, a cow could not have produced Harvey Milk.",false,True
+67,strategyqa_67,strategyqa,AF,False,Pet hamsters typically have a maximum lifespan of three years. Leap years are typically separated by four years.,Could a hamster experience two leap years?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Leap years occur at four-year intervals, so two consecutive leap years are always four calendar years apart. A pet hamster’s maximum lifespan is three years, which is shorter than the four-year gap between leap years. Therefore a hamster cannot be alive during two different leap years.",false,True
+68,strategyqa_68,strategyqa,AF,False,"Water skiing requires sufficient area on a smooth stretch of water, one or two skis, a tow boat with tow rope, two or three people, and a personal flotation device. Venus has a mean surface temperature of 863 °F. There may have been substantial quantities of liquid water on the surface of Venus at one point, but after a period of 600 million to several billion years, a runaway greenhouse effect was caused by the evaporation of that original water.",Can you go water skiing on Venus?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Water skiing needs liquid water, skis, a boat, etc. Venus no longer has liquid water; its surface is extremely hot (863 °F) and any past water has long since evaporated in a runaway greenhouse effect. Therefore, water skiing on Venus is impossible.",false,True
+69,strategyqa_69,strategyqa,AF,True,"The company is renaming itself Stellantis following the completion of its merger. There are 14 automobile brands owned by the company, which will be keeping their names and logos.",Is Fiat Chrysler gaining a new overall corporate identity?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that the company is renaming itself Stellantis after the merger, indicating that Fiat Chrysler Automobile’s parent company will now operate under a new overarching corporate name. This constitutes a new overall corporate identity, hence the answer is true.",true,True
+70,strategyqa_70,strategyqa,AF,True,Jason cheated on Medea with Creusa Dr. Disrespect cheated on his wife with another woman,Does Jason have anything in common with Dr. Disrespect?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Jason and Dr. Disrespect both committed infidelity: Jason cheated on Medea with Creusa, and Dr. Disrespect cheated on his wife with another woman. Hence they share the act of cheating on their partners.",true,True
+71,strategyqa_71,strategyqa,AF,False,"The Swiss Guard is the military of Vatican City and consists of 135 members. There are 186,000 active duty Marines as of 2017.",Would Swiss Guard defeat the Marines?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Swiss Guard has only 135 members, while the U.S. Marine Corps has about 186,000 active-duty personnel, far superior resources, equipment, training breadth, and combat capability. Given this massive disparity in numbers and military capacity, it is implausible that the Swiss Guard could defeat the Marines.",false,True
+72,strategyqa_72,strategyqa,AF,False,The Great Gatsby is often taught in high school English classes.  Hugh Jackman worked as a school gym teacher before he was an actor.,"When Hugh Jackman was a teacher, would he have taught The Great Gatsby?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The novel is typically covered in English classes, while Jackman’s role was limited to physical education, so as a gym teacher he would not have been responsible for teaching that literature.",false,True
+73,strategyqa_73,strategyqa,AF,False,Crane are a type of bird.  Slamdunking is a basketball maneuver in which the player puts the basketball in the basket with one or two hands above the rim. Birds don't have hands.,Can crane slamdunk?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Slamdunking is defined as placing a basketball through the hoop with one or two hands above the rim. Cranes are birds, and birds do not possess hands. Because the necessary anatomical feature for slamdunking is absent, a crane cannot perform a slamdunk.",false,True
+74,strategyqa_74,strategyqa,AF,True,The longest Kane lasted in the Royal Rumble was 53:46 in 2001. Chris Benoit lasted over an hour in the 2004 Royal Rumble. Chris Benoit murdered his own wife and son in 2007.,Have any murderers outlasted Kane's Royal Rumble record?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Kane’s longest Royal Rumble time was 53:46 in 2001. Chris Benoit, who later murdered his wife and son in 2007, lasted over 60 minutes in the 2004 Royal Rumble, surpassing Kane’s time. Therefore, a murderer did outlast Kane’s record.",true,True
+75,strategyqa_75,strategyqa,AF,True,"Athena was the Greek goddess of war. Aphrodite was the Greek goddess of love. Freya was the Norse goddess of war, love, and fertility.",Is Freya a combination of Athena and Aphrodite?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+In the context, Athena embodies war, and Aphrodite embodies love. Freya encompasses both war and love (plus fertility). Therefore, she unites the principal domains of Athena and Aphrodite, making her effectively a combination of the two.",true,True
+76,strategyqa_76,strategyqa,AF,False,Who's on First debuted in 1945. Monty Python's first show was in 1969.,Did Monty Python write the Who's on First sketch?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Who's on First first appeared in 1945, while Monty Python did not form until 1969; therefore they could not have written the sketch.",false,True
+77,strategyqa_77,strategyqa,AF,False,Pitman shorthand was invented in 1837. The tenth Amendment to the Constitution was added in 1791.,Was the tenth Amendment to the Constitution written using Pitman shorthand?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Pitman shorthand did not exist until 1837, whereas the Tenth Amendment was added in 1791—46 years earlier—so it could not have been written using that shorthand system.",false,True
+78,strategyqa_78,strategyqa,AF,False,The Second Coming refers to Jesus Christ returning to earth Christians and Muslims believe in Jesus Christ Woody Allen is Jewish,Does Woody Allen await the Second Coming?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Second Coming is a concept believed in by Christians and Muslims who accept Jesus as the Messiah. The context states that Woody Allen is Jewish, and Judaism does not hold the doctrine of Jesus’ Second Coming. Therefore, Woody Allen, being Jewish, would not be awaiting the Second Coming.",false,True
+79,strategyqa_79,strategyqa,AF,True,"In Captain America: Civil War, Iron Man and Captain America became enemies following a disagreement. Iron Man summoned Spiderman to fight with his team of still-loyal Avengers. Falcon was one of Captain America's best friends and supported the Captain in the conflict. Therefore, Spiderman and Falcon were on opposite teams during the inter-Avenger battle in the movie.",Did Spiderman fight against Falcon in the MCU?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that during Captain America: Civil War, Spiderman was on Iron Man’s team while Falcon was on Captain America’s team, placing them on opposing sides in the airport battle, meaning Spiderman did indeed fight against Falcon.",true,True
+80,strategyqa_80,strategyqa,AF,False,The French Revolution took place 1789-1799. The Eiffel Tower was built a century later in 1888.,Was the Eiffel tower used as a symbol of the French Revolution?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The French Revolution ended in 1799, nearly ninety years before the Eiffel Tower was completed in 1888, so the tower could not have been used as a symbol of that revolution.",false,True
+81,strategyqa_81,strategyqa,AF,True,Durian has a pungent odor that many people describe as being similar to feet and onions. Unpleasant smells can make people feel nauseous. ,Could Durian cause someone's stomach to feel unwell?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Durian has a very strong, unpleasant odor, and unpleasant smells can induce nausea; therefore, the smell of durian could make someone feel sick to their stomach.",true,True
+82,strategyqa_82,strategyqa,AF,False,Elementary schools typically teach K-5th grade. 5th Graders are reaching a point in their education where they are just beginning to understand decimals and fractions. Graphing calculators are used for higher level math work including complex equations and functions. Students are usually introduced to functions in late middle or high school math.,Do Elementary School students typically need graphing calculators?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Elementary school covers K-5, and 5th graders are only beginning to work with decimals and fractions. Graphing calculators are intended for more advanced topics such as complex equations and functions that students usually encounter in late middle or high school. Therefore, elementary students do not typically need graphing calculators.",false,True
+83,strategyqa_83,strategyqa,AF,True,Grapefruit is a citrus fruit. Grapefruit can cause some medications to reach unintentionally high levels in the body.  SSRI's are a medication type that can be affected by grapefruit.,Would someone on antidepressants need to be cautious of some citrus fruits?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+SSRIs are a class of antidepressants. The context states that grapefruit, a citrus fruit, can raise levels of medications that include SSRIs. Therefore, a person taking antidepressants of the SSRI type should indeed be cautious with grapefruit and potentially other citrus fruits that have similar effects.",true,True
+84,strategyqa_84,strategyqa,AF,False,"Anchovy are a type of small fish. Anchovy are concentrated in the temperate waters of the Atlantic, Indian, and Pacific Oceans. Anchovy are rarely found in colder waters.",Do more anchovy live in colder temperature waters than warmer?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context says anchovies are concentrated in temperate waters and are rarely found in colder waters, so fewer anchovies live in colder waters than in warmer temperate waters.",false,True
+85,strategyqa_85,strategyqa,AF,False,"The Toyota Stadium seats 45,000 people Gothenburg has a population of over five hundred thousand",Could the Toyota Stadium sit a tenth of the population of Gotheburg?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A tenth of Gothenburg’s population is more than 50,000 (since the city has over 500,000 people). Toyota Stadium has only 45,000 seats, which is fewer than that tenth, so it could not accommodate that many people.",false,True
+86,strategyqa_86,strategyqa,AF,True,Charles Manson is famous for a series of murders in 1971. Charles Manson's cult was responsible for seven deaths in 1971 but he was not present during the murders. Boxing promoter Don King has been charged with killing two people in incidents 13 years apart and settled out of court..,Has Don King killed more people than Charles Manson did with his own hands in 1971?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Charles Manson personally killed zero people in 1971 because, while his cult murdered seven, he was not present. Don King was charged with killing two people. Since 2 > 0, Don King killed more people with his own hands than Charles Manson did in 1971.",true,True
+87,strategyqa_87,strategyqa,AF,True,"""Marco Polo"" is a popular game among children and adults played while swimming. To play ""Marco Polo"", one person shouts ""Marco"" and the other shouts ""Polo"" while avoiding being tagged.",Do you often hear Marco Polo's name shouted near water?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The game Marco Polo is commonly played in swimming pools, where participants repeatedly shout “Marco” and “Polo,” so the name is frequently heard around water.",true,True
+88,strategyqa_88,strategyqa,AF,False,Myocardial infarction is a problem in the heart. The equivalent in the brain would be similar to a stroke.,Is myocardial infarction a brain problem?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Myocardial infarction refers to the death of heart muscle tissue due to loss of blood supply; it affects the heart, not the brain. A comparable condition in the brain is stroke, but myocardial infarction itself is not a brain problem.",false,True
+89,strategyqa_89,strategyqa,AF,True,The National Hockey League is the premiere North American hockey league. The National Hockey League has 7 Canadian teams. The National Hockey League has 24 teams from the United States.,Do American teams in National Hockey League outnumber Canadian teams?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+There are 24 American teams and 7 Canadian teams; since 24 is greater than 7, American teams outnumber Canadian teams.",true,True
+90,strategyqa_90,strategyqa,AF,False,Tonsils are a pair of soft tissue masses located at the rear of the throat Tonsillitis is the inflammation of tonsils. Fish do not have tonsils. Tonsils are only found in mammals. ,Can fish get Tonsillitis?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Tonsillitis is an inflammation of tonsils. The context states that fish do not have tonsils and that tonsils are found only in mammals. Without tonsils, fish cannot experience tonsil inflammation, so they cannot get tonsillitis.",false,True
+91,strategyqa_91,strategyqa,AF,False,Ivan the Terrible was the 1st Tsar of Russia. Ivan the Terrible died in 1584. The first confirmed person to fly was Jean Francois Pilatre de Rozier in 1783.,Has Ivan the Terrible flown to Europe?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Ivan the Terrible died in 1584, more than 200 years before the first confirmed human flight in 1783; therefore, he could not have flown anywhere, including to Europe.",false,True
+92,strategyqa_92,strategyqa,AF,True,"Ringo Starr is a vegetarian. Vegetarianism is the practice of abstaining from the consumption of meat. Pot roast is a braised beef dish made by browning a roast-sized piece of beef before slow cooking the meat in a covered dish, sometimes with vegetables, in or over liquid.",Would Ringo Starr avoid the pot roast at a restaurant?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Ringo Starr follows a vegetarian diet, which means he avoids dishes containing meat. Pot roast is made from beef, so it is a meat dish. Therefore, Ringo Starr would refrain from ordering or eating pot roast at a restaurant.",true,True
+93,strategyqa_93,strategyqa,AF,True,David Lynch is a director that created the television show Twin Peaks. Trent Reznor is the lead singer of Nine Inch Nails. Trent Reznor appeared on Twin Peaks: The Return in 2017. David Lynch directed the music video for Nine Inch Nail's Came Back Haunted.,Is Nine Inch Nails's lead singer associated with David Lynch?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Trent Reznor is the lead singer of Nine Inch Nails. The context states that Reznor appeared on Twin Peaks: The Return, a project by director David Lynch, and that Lynch directed Nine Inch Nails’ music video for Came Back Haunted. These collaborations demonstrate a direct association between Trent Reznor and David Lynch.",true,True
+94,strategyqa_94,strategyqa,AF,False,Futurama was cancelled in 2013. The Simpsons is still creating new episodes as of May 2020. Futurama aired 140 total episodes. The Simpsons has aired over 600 episodes.,Will Futurama surpass the number of episodes of The Simpsons by the end of 2020?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Futurama stopped producing episodes in 2013 and will remain at 140 episodes through 2020, while The Simpsons already has over 600 episodes and continues to produce more. Therefore, Futurama cannot exceed The Simpsons’ episode count by the end of 2020.",false,True
+95,strategyqa_95,strategyqa,AF,True,"The three smallest bone in the body are malleus, incus, and stapes. Malleus, incus, and stapes are located in the ear. The femur is the largest bone in the body. The femur is located in the leg. The torso is located in the center of the body.",Will the torso be safe from blows to the largest and smallest bones in body?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The smallest bones (malleus, incus, stapes) reside in the ear and the largest bone (femur) is in the leg, while the torso is located centrally in the body. Since blows aimed at the ear or leg target regions away from the torso, such impacts would not strike the torso, leaving it unharmed.",true,True
+96,strategyqa_96,strategyqa,AF,False,"Family Guy takes place in the fictional town of Quahog, Rhode Island. Rhode Island is a state on the American East Coast.",Does Family Guy take place on the American West Coast?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Family Guy is set in Quahog, Rhode Island, and Rhode Island is located on the American East Coast, not the West Coast.",false,True
+97,strategyqa_97,strategyqa,AF,True,"French toast is made from bread, eggs, milk, and cinnamon. Goats are able to produce milk, similar to cows. Goats milk is used in a variety of cheeses and milks sold in super markets.",Can a goat be used for one of the ingredients in French toast?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+French toast requires milk, and goats can produce milk that can be used in cooking. Therefore, a goat can supply one of the necessary ingredients for French toast.",true,True
+98,strategyqa_98,strategyqa,AF,False,"The Matrix ends in a cliffhanger. The story is then resolved in two sequels, making a trilogy. There are also supplemental works adding to the story, such as a video game and the Animatrix.",Is the Matrix a standalone movie?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context says The Matrix ends on a cliffhanger and its story is completed only through two sequels and additional works. A movie that relies on sequels to resolve its main plot is not considered standalone, so the Matrix is not a standalone movie.",false,True
+99,strategyqa_99,strategyqa,AF,True,"The movie Brave is set in the Scottish highlands. Merida, the main character of Brave, is a Princess of Medieval Scotland ",Does the Pixar film Brave feature Scottish people?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The film is set in the Scottish Highlands and its protagonist, Merida, is a medieval Scottish princess, so Scottish people are depicted in the movie.",true,True
+100,strategyqa_100,strategyqa,AF,False,"The Liberty Bell weighs 2,080 pounds. A mature Holstein cow weighs around 1,500 pounds.",Will a Holstein cow and the Liberty Bell balance out a giant scale?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Liberty Bell weighs 2,080 lb while a mature Holstein cow weighs about 1,500 lb, leaving a 580 lb difference; therefore, they would not balance on a scale.",false,True
+101,strategyqa_101,strategyqa,AF,False,French is a romance language that originated in France. The Cleary School in Smithtown New York is a school for the deaf.,Can a student from Smithtown's Cleary School understand the speech of a French person?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Cleary School is for the deaf, so its students generally cannot hear spoken language; therefore they would not be able to understand a French speaker’s oral speech.",false,True
+102,strategyqa_102,strategyqa,AF,True,The biblical Sarah lived to the age of 127. The biblical Methuselah lived to 969 years of age.,Did Methuselah live at least 800 years as long as Sarah?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Sarah lived 127 years and Methuselah lived 969 years.  
+Difference = 969 − 127 = 842 years, which is greater than 800.  
+Therefore, Methuselah did live at least 800 years longer than Sarah.",true,True
+103,strategyqa_103,strategyqa,AF,True,"Amazon stock has reached as high as $2,500 a share as of June 2020. The basic Netflix subscription package costs $8.99 a month as of 2020.",Could one Amazon share ever buy twenty year Netflix subscription?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A 20-year Netflix basic plan requires 240 monthly payments.  
+240 × $8.99 = $2,157.60.  
+One Amazon share was worth about $2,500 at its June 2020 peak, which exceeds $2,157.60.  
+Since the share’s value is higher than the 20-year subscription cost, selling one share could indeed cover that expense, so the statement is true.",true,True
+104,strategyqa_104,strategyqa,AF,True,Giraffes are much taller than other land animals. Giraffe shelters at zoos must be built larger than shelters for other animals to accommodate their height.,Do giraffes require special facilities at zoos?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Because giraffes’ exceptional height means standard enclosures are not tall enough, zoos must build larger, specially designed shelters for them, so they indeed require special facilities.",true,True
+105,strategyqa_105,strategyqa,AF,True,"The Spanish-American War lasted from April 21, 1898 to August 13, 1898. William McKinley was President of the United States from March 4, 1897 to September 14, 1901. William McKinley died from gun related injuries after an assassination attempt. Abraham Lincoln died shortly after being shot by John Wilkes Booth.",Did US President during Spanish-American War suffer similar demise to Abraham Lincoln?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Spanish-American War occurred in 1898, when William McKinley was President. The context states that McKinley “died from gun related injuries after an assassination attempt,” paralleling Abraham Lincoln’s death after being shot. Since both presidents were fatally shot, McKinley suffered a similar demise to Lincoln.",true,True
+106,strategyqa_106,strategyqa,AF,True,"Elvis Presley is known as The King of Rock'n Roll. Elvis Presley loved to eat peanut butter and bananas. Bananas come from banana plants. Peanut butter comes from peanuts, which come from peanut plants.",Were plants crucial for The King of Rock'n Roll's snack with bananas?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Elvis Presley’s snack was peanut butter and bananas. Bananas grow on banana plants, and peanut butter is made from peanuts that grow on peanut plants. Without these plants, neither component of the snack would exist, so plants were indeed crucial.",true,True
+107,strategyqa_107,strategyqa,AF,False,The father of social security system is Franklin D. Roosevelt.  Franklin D. Roosevelt was in Columbia Law School in 1907. ,Was the father of social security system serving in the white house during the Panic of 1907?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The father of the social security system, Franklin D. Roosevelt, was attending Columbia Law School in 1907. Since he did not become President (and thus serve in the White House) until 1933, he could not have been serving in the White House during the Panic of 1907.",false,True
+108,strategyqa_108,strategyqa,AF,False,Puzzle Place aired on PBS between 1995 and 1998. Naruto aired on Cartoon Network in 2005.,Could you watch Naruto and Puzzle Place on the same channel?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Puzzle Place was broadcast on PBS, whereas Naruto was broadcast on Cartoon Network. These are two distinct television channels, so a viewer could not have watched both programs on the same channel.",false,True
+109,strategyqa_109,strategyqa,AF,False,The full circle of a rainbow cannot usually be seen from ground level Sometimes the full circle of a rainbow can be seen from a high building or aircraft You can see more of a rainbow the closer to the horizon the sun is Lunch occurs at midday when the sun is likely high in the sky,Is lunch on the beach a good activity to spot the full circle of a rainbow?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A full-circle rainbow is easiest to see when the sun is low near the horizon, because the lower the sun, the more of the circular arc becomes visible. Lunch on the beach occurs around midday, when the sun is usually high in the sky, reducing the visible portion of a rainbow to a semicircle at most. Therefore, having lunch on the beach is not a good time to spot the full circle of a rainbow.",false,True
+110,strategyqa_110,strategyqa,AF,False,Adherents to Catholicism subscribe to the notion of the '7 deadly sins'. Pride is one of the 7 deadly sins.,Would a Catholic priest commend someone's pride?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Pride is explicitly listed among the seven deadly sins in Catholic teaching. Because Catholic priests are expected to discourage sin and promote virtue, they would not praise or commend an attitude that Catholic doctrine identifies as sinful. Therefore, a Catholic priest would not commend someone's pride.",false,True
+111,strategyqa_111,strategyqa,AF,False,"Aldi cuts costs by charging for bags, buying in bulk, and by avoiding brand name items.  Aldi removes spoiled or expired foods from their shelves immediately upon identification.",Are Aldi's foods discounted due to being out of date?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Aldi’s practice is to immediately remove any spoiled or expired foods from their shelves rather than discounting them, so the foods offered for sale are not discounted because they are out of date.",false,True
+112,strategyqa_112,strategyqa,AF,True,"JPMorgan Chase had a total of 256,981 employees in the fourth quarter of 2019. The estimated population of Samoa as of July 1st, 2019 is 200,874.",Could every citizen of Samoa send a letter to a unique JPMorgan Chase employee?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+There are 256 981 JPMorgan Chase employees and only 200 874 Samoan citizens. Because the employee count is greater than the population, it is possible to pair each citizen with a distinct employee, allowing every Samoan to send a letter to a unique JPMorgan Chase employee.",true,True
+113,strategyqa_113,strategyqa,AF,False,"There were 24 different US President's in the 1800s. 4 is an unlucky number in Chinese numerology. Where East Asian and Western cultures blend, such as in Hong Kong, it is possible in some buildings that the thirteenth floor along with all the floors with 4s to be omitted. ",Is number of different US President's in 1800s a lucky number in Hong Kong?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The count of US Presidents in the 1800s is 24.  
+In Hong Kong, numbers containing the digit 4 are viewed as unlucky because the Cantonese word for 4 sounds like “death.”  
+Since 24 ends with the digit 4, it is considered unlucky, not lucky.",false,True
+114,strategyqa_114,strategyqa,AF,True,"Rupert Murdoch's alma mater is Worcester College. Worcester College was founded in 1714. The first documented use of the term the United States of America was in a January 2, 1776 letter.",Does Rupert Murdoch's alma mater have more history than the USA?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Rupert Murdoch’s alma mater, Worcester College, was founded in 1714.  
+The term “United States of America” first appeared in 1776.  
+Since 1714 is earlier than 1776, Worcester College predates the USA, so it indeed has more history.",true,True
+115,strategyqa_115,strategyqa,AF,False,"Shirley Bassey recorded the song Diamonds are Forever in 1971, Over time, diamonds degrade and turn into graphite. Graphite is the same chemical composition found in pencils.",Is the title of Shirley Bassey's 1971 diamond song a true statement?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The song’s title claims that diamonds last forever, but chemically diamond is a metastable form of carbon that will very slowly transform into the more stable form, graphite; therefore diamonds are not literally permanent, so the statement is untrue.",false,True
+116,strategyqa_116,strategyqa,AF,False,Ethiopian cuisine specializes in vegetables and spicy meat dishes. Ethiopia is a landlocked country without access to seas or oceans.,Is shrimp prevalent in Ethiopian cuisine?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Ethiopian cuisine is shaped by the country’s landlocked geography, which limits access to seafood. Traditional dishes center on vegetables and spicy meats rather than fish or shellfish. Because shrimp is a marine product and Ethiopia has no coastline, it is not commonly featured in Ethiopian cooking, so it is not prevalent.",false,True
+117,strategyqa_117,strategyqa,AF,True,"Pandora was a mythical figure that opened a box and released several ills on the world including famine, sickness, and death. The Four Horsemen of the Apocalypse are: Pestilence, War, Famine, and Death.",Were items released from Pandora's box at least two of the names of Four Horsemen?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Pandora’s box released famine and death, which are two of the Four Horsemen (Famine and Death), so at least two names overlap.",true,True
+118,strategyqa_118,strategyqa,AF,False,Lorem Ipsum paragraphs are meant to be temporary. Web designers always remove lorem ipsum paragraphs before launch.,Should a finished website have lorem ipsum paragraphs?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that lorem ipsum paragraphs are only temporary placeholders and are always removed before launch, implying that a completed website should not contain them.",false,True
+119,strategyqa_119,strategyqa,AF,True,Calcium is an important nutrient for bone health. Kale has more calcium per serving than spinach.,"For bone growth, is kale more beneficial than spinach?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Calcium is essential for bone health and growth. Since kale contains more calcium per serving than spinach, it offers more of this key nutrient, making it more beneficial for bone growth.",true,True
+120,strategyqa_120,strategyqa,AF,False,Scholars have determined Noah's Ark to be 75 feet wide. Each lane of the Lincoln Tunnel is 21 feet wide.,WIll Noah's Ark hypothetically sail through flooded Lincoln Tunnel?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Noah’s Ark is 75 ft wide.  
+Even if the entire roadway of one tube of the Lincoln Tunnel were flooded, its maximum usable width would be the combined width of its lanes.  
+With each lane 21 ft wide, three lanes give 63 ft (and two lanes only 42 ft).  
+The 75 ft-wide Ark exceeds either possible tunnel width, so it could not pass through.",false,True
+121,strategyqa_121,strategyqa,AF,False,"A sophist is a specific kind of teacher in ancient Greece, in the fifth and fourth centuries BC. Sophists specialized in using the tools of philosophy and rhetoric, though other sophists taught subjects such as music, athletics and mathematics. An épée is a sword used in fencing. The épée was not developed until the 19th century.",Would a sophist use an épée?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Sophists lived in ancient Greece (5th–4th centuries BC), while the épée was not invented until the 19th century. Since the weapon did not exist during the sophists’ time, they could not have used it.",false,True
+122,strategyqa_122,strategyqa,AF,True,The Aztecs cultivated cacti for the fruit Tenochtitlan was the capital of the Aztec empire Cuauhtémoc was the last king of Tenochtitlan , Is cactus fruit an important menu item for a restaurant based on Cuauhtémoc?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context tells us that the Aztecs, whose last king was Cuauhtémoc, specifically cultivated cacti for their fruit. A restaurant themed around Cuauhtémoc would therefore draw on Aztec food traditions. Since cactus fruit was deliberately grown and used by the Aztecs, it logically represents a significant traditional ingredient, making it an important item for such a restaurant’s menu.",true,True
+123,strategyqa_123,strategyqa,AF,False,"The Triple Crown is an accomplishment in which a jockey wins three specific races. The three Triple Crown races are: Preakness, Kentucky Derby, and Belmont Stakes. The three Triple Crown races take place weeks apart. Eid al-Fitr is a Muslim holiday that lasts for three consecutive days.",Could  jockey win Triple Crown between Eid al-Fitr endpoints?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Eid al-Fitr holiday lasts only three consecutive days, while the three Triple Crown races are scheduled weeks apart from one another. Because the span from the Kentucky Derby to the Belmont Stakes is much longer than three days, a jockey cannot win all three races within the start and end points of Eid al-Fitr.",false,True
+124,strategyqa_124,strategyqa,AF,False,DARPA is an agency in the US focused on defense and new technologies. DARPA was founded in 1958 under Dwight D Eisenhower. Albert Einstein was a famous physicist who died in 1955.,Did DARPA influence Albert Einstein? ,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Albert Einstein died in 1955, while DARPA was founded in 1958; because DARPA did not exist during Einstein’s lifetime, it could not have influenced him.",false,True
+125,strategyqa_125,strategyqa,AF,True,"The Battle of Actium saw Mark Antony's army lose to Octavian. Octavian's army had 400 ships, 16000 infantry, and 3,000 archers. The Brazilian Navy has over 80,000 personnel, including 16,000 marines. Several Brazilian Navy ships are armed with explosive torpedoes. ",Could modern Brazilian Navy have hypothetically turned the tide in Battle of Actium?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A modern navy equipped with steel-hulled, engine-powered warships, long-range guns, and explosive torpedoes would vastly outclass the oared wooden galleys of 31 BCE. Even Octavian’s entire force of 400 ships and 19 000 missile troops lacked any weapon that could penetrate modern armor or outrange naval artillery. The Brazilian Navy’s 80 000 personnel, including 16 000 marines, could deploy overwhelming firepower, mobility, and amphibious capability, easily destroying or disabling both Antony’s and Octavian’s fleets and supporting armies. Therefore, if hypothetically present, the modern Brazilian Navy would have been able to reverse the outcome at Actium.",true,True
+126,strategyqa_126,strategyqa,AF,False,The main building of the Royal Observatory is the Octagon Room. A yield sign is shaped like a rounded triangle. Two figures are similar if they have the same shape but not necessarily the same size.,"In geometry terms, is the Royal Observatory in Greenwich similar to a yield sign?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Similarity requires same shape. The Royal Observatory’s main building is octagonal (eight-sided), while a yield sign is a rounded triangle (three-sided). Because an octagon and a triangle have different numbers of sides and different angles, they are not the same shape and therefore not similar.",false,True
+127,strategyqa_127,strategyqa,AF,False,Glasses are used to improve one's vision capabilities. QR codes are not readable by humans and have to be read by machines or programs.,Do you have to put on glasses to read a QR code?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+QR codes encode data in patterns that are decoded by cameras or other devices, not by direct human reading. Since humans cannot interpret the pattern visually, wearing glasses (which only enhance human visual acuity) will not enable a person to read a QR code themselves. Therefore, putting on glasses is not necessary for reading a QR code.",false,True
+128,strategyqa_128,strategyqa,AF,True,"Glycol is a commonly used de-icing fluid for commercial planes. American Airlines flies all year round, including throughout the winter.",Is Glycol something United Airlines would buy?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Glycol is the standard de-icing fluid for commercial aircraft. United Airlines is a commercial carrier that operates year-round, including in winter conditions that require de-icing. Therefore, like other airlines, United would need to purchase glycol for its operations.",true,True
+129,strategyqa_129,strategyqa,AF,True,"There were 3 astronauts in the crew of the Apollo 15 mission. A unicycle only contains one saddle, and is typically only operated by a single person.",Would the crew of Apollo 15 have difficulty riding a unicycle?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A unicycle is designed for a single rider, having only one saddle. The Apollo 15 crew consisted of three astronauts, so all members could not ride the same unicycle simultaneously. Therefore, as a group, they would have difficulty riding a unicycle.",true,True
+130,strategyqa_130,strategyqa,AF,True,"Spaghetti noodles are long and thin, they are difficult to scoop and must be twirled. Spaghetti is never served in a restaurant without a fork.",Is it unusual to eat spaghetti without a fork?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that spaghetti is “never served in a restaurant without a fork,” meaning using a fork is the standard, expected practice. Something that never happens in normal restaurant service is by definition unusual. Therefore, eating spaghetti without a fork would indeed be unusual.",true,True
+131,strategyqa_131,strategyqa,AF,False,Marco Rubio adheres to the religious sect of Christianity known as Catholicism. Catholics and other Christians worship God. Allah is worshiped by believers of Islam.,Does Marco Rubio have a close relationship with Allah?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Marco Rubio follows Catholic Christianity, which involves worshiping God as understood in Christian doctrine and does not involve worshiping Allah, the deity worshiped in Islam. Hence, there is no basis to say he has a close relationship with Allah.",false,True
+132,strategyqa_132,strategyqa,AF,False,"Dr. Seuss's wife committed suicide. In his later years, Dr. Seuss was diagnosed with cancer.",Did Dr. Seuss live a tragedy free life?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Dr. Seuss experienced significant tragedies: his wife’s suicide and his own cancer diagnosis, so his life was not free of tragedy.",false,True
+133,strategyqa_133,strategyqa,AF,True,Columbus was originally from Genoa in what is now Italy. His expeditions were funded by the Spanish monarchy.,Did Christopher Columbus sail representing a different country than his original home?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Columbus’s homeland was Genoa (part of modern Italy), but his voyages were sponsored by and carried out under the flag of Spain, meaning he represented a different country than the one he was born in.",true,True
+134,strategyqa_134,strategyqa,AF,False,"Quadragenarians are people that are in their 40s. As people age, their memory can get worse. Half of people over age 50 have mild to severe memory loss. Ken Jennings was 46 years old when he won Jeopardy! The Greatest of All Time tournament.",Do quadragenarian's have little memory capacity?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Quadragenarians are in their 40s. The context only states that memory problems affect about half of people over 50, not those in their 40s, and even gives an example of a 46-year-old excelling in a memory-intensive competition. Therefore it is not accurate to say quadragenarians have little memory capacity.",false,True
+135,strategyqa_135,strategyqa,AF,False,"Bonanza was a television show that aired from  September 12, 1959 until January 16, 1973. Gandhi was assassinated on January 30, 1948.",Did Gandhi watch the television show Bonanza?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Gandhi died in 1948, while the television show Bonanza did not begin airing until 1959, over a decade later, so Gandhi could not have watched it.",false,True
+136,strategyqa_136,strategyqa,AF,True,Grey seals have no ear flaps and their ears canals are filled with wax. Grey seals hear better underwater when their ears open like a valve. Dogs have sensitive ears that can hear as far as a quarter of a mile away.,Would a dog respond to bell before Grey seal?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A bell is typically sounded in air. Dogs have very sensitive hearing in air, able to detect sounds up to a quarter-mile away, whereas grey seals’ hearing is optimized for underwater listening and their ear canals are normally plugged with wax when on land, limiting airborne sound detection. Therefore the dog would detect and respond to the bell sooner than the grey seal.",true,True
+137,strategyqa_137,strategyqa,AF,False,"Desserts are sweets. Meals generally begin with savory foods, and sweets eaten after.",Is dessert eaten before breakfast?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that sweets (desserts) are eaten after meals, and breakfast is a meal, so dessert would come after, not before, breakfast.",false,True
+138,strategyqa_138,strategyqa,AF,True,"Grapefruit is a citrus fruit consumed mostly during the summer months. Chemicals in grapefruit can interact with medications such as statins. Grapefruit can lead to too much absorption of statin medicine. Too much statins can cause severe muscle pain, liver damage, kidney failure and death. ",Can eating grapefruit kill besides allergies or choking?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Grapefruit contains chemicals that increase the absorption of certain drugs such as statins. Excessive absorption of statins can lead to severe muscle breakdown, liver damage, kidney failure and ultimately death. Therefore, apart from allergy or choking, grapefruit can indirectly cause fatal outcomes when it interacts with these medications.",true,True
+139,strategyqa_139,strategyqa,AF,False,"""A Tale of Two Cities"" is a historical fiction novel. Popular science books focus on scientific facts presented to a mainstream audience. Fiction is not fact.","Is ""A Tale of Two Cities"" a popular science novel?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+""A Tale of Two Cities"" is categorized as historical fiction, whereas popular science books are nonfiction works that explain scientific facts. Since historical fiction is not nonfiction and does not aim to present science to a mainstream audience, the novel cannot be considered a popular science book.",false,True
+140,strategyqa_140,strategyqa,AF,False,"New York City is located within the United States. The currency used in the United States is the United States dollar, not the Euro.",Would someone pay for a coffee in NYC with Euros?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that the currency used in the United States, including New York City, is the United States dollar and not the Euro, so paying with Euros would not be standardly accepted.",false,True
+141,strategyqa_141,strategyqa,AF,False,"Jehovah's Witness is a religious group that strictly forbids tobacco and smoking. A prominent character in Alice's Adventures in Wonderland, the caterpillar, blows rings of smoke from a large pipe.",Would a Jehovah's witness approve of Alice's Adventures in Wonderland?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Jehovah’s Witnesses prohibit tobacco use, and Alice’s Adventures in Wonderland depicts the Caterpillar smoking a pipe. Because the story contains behavior that conflicts with their strict stance against smoking, a Jehovah’s Witness would be unlikely to approve of it.",false,True
+142,strategyqa_142,strategyqa,AF,False,The Very Large Telescope observes outer space. The largest mountain on earth is underneath the ocean.,Can the Very Large Telescope observe the largest mountain on Earth?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Very Large Telescope is designed to observe astronomical objects in the sky, not underwater terrain. Since the largest mountain on Earth is submerged beneath the ocean, the telescope cannot observe it.",false,True
+143,strategyqa_143,strategyqa,AF,True,Goofy is an anthropomorphic dog character.  Dogs require regular heartworm prevention. ,"If Goofy were a pet, would he need heartworm prevention?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Goofy is characterized as an anthropomorphic dog. The context states that dogs require regular heartworm prevention. Therefore, if Goofy were treated as a pet dog, he would also need heartworm prevention.",true,True
+144,strategyqa_144,strategyqa,AF,True,Sara Paxton is an American actress. Latino's are people with ancestral ties to Latin America. Sara Paxton was born to an Irish/English father and a Mexican/Spanish/Chilean mother. Mexico is a country that is part of Latin America.,Is blonde hair green eyed Sara Paxton considered a Latino?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A Latino is defined as a person with ancestral ties to Latin America. Sara Paxton’s mother is Mexican/Spanish/Chilean, giving Sara Paxton Mexican ancestry, and Mexico is part of Latin America. Therefore, she meets the definition of a Latino.",true,True
+145,strategyqa_145,strategyqa,AF,False,"Dyscalculia is a learning disability in math. People with dyscalculia have trouble with math at many levels.  Surveyors work with elements of geometry, trigonometry, regression analysis, physics, engineering, metrology, programming languages, and the law.  Geometry and trigonometry are types of advanced mathematics.",Would you hire someone with dyscalculia to do surveying work?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Surveying relies heavily on advanced mathematical skills such as geometry, trigonometry, and regression analysis. Dyscalculia is characterized by significant difficulty in understanding and performing mathematical tasks. Because the core competencies required for surveying directly conflict with the challenges faced by someone with dyscalculia, hiring such a person for surveying work would be impractical.",false,True
+146,strategyqa_146,strategyqa,AF,False,Asiana Airlines is the second largest airline in South Korea Harry Potter is a fictional character,Can Harry Potter book a flight on Asiana Airlines?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Harry Potter does not exist in reality; he is a fictional character, and only real individuals can make airline bookings. Therefore, he cannot actually book a flight on Asiana Airlines.",false,True
+147,strategyqa_147,strategyqa,AF,False,"Drummers usually work with guitarists or other stringed instrumentalists. However, drum sets do not contain strings. Musicians usually change their own strings as necessary, so it is their band mates, not the drummer, who carries the spare strings.",Do drummers need spare strings?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Drum sets have no strings, so nothing on a drummer’s instrument can break that would require replacement strings. Spare strings are needed only by the string-instrument players (guitarists, etc.), not by the drummer.",false,True
+148,strategyqa_148,strategyqa,AF,True,Cardi B became lactose intolerant in her early twenties. People who are lactose intolerant cannot have dairy. Soy milk is an alternative to dairy milk.,Would Cardi B. benefit from soy milk?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Cardi B is lactose intolerant, which means she must avoid dairy products. Soy milk is a non-dairy alternative to regular milk, so using soy milk would allow her to have a milk substitute without lactose, providing her with the nutrients and culinary uses of milk while avoiding discomfort. Therefore, she would benefit from soy milk.",true,True
+149,strategyqa_149,strategyqa,AF,True,Ocean sunfish live in salt water environments. Goldfish live in fresh water environments. Putting a fish into the wrong water type can cause them to die.,Would it be impossible to keep an ocean sunfish and a goldfish in the same tank?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Ocean sunfish require salt water, while goldfish require fresh water, and placing either species in the wrong type of water can be fatal. A single tank cannot simultaneously be both fresh and salt water, so successfully housing both fish together is not feasible.",true,True
+150,strategyqa_150,strategyqa,AF,False,Narcan is a medication that save the life of someone overdosing on opiates. Amy Winehouse died from alcohol poisoning. Narcan cannot work on alcohol overdoses.,Would Amy Winehouse's death have been prevented with Narcan?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Narcan reverses the effects of opioid overdoses only; Amy Winehouse died from alcohol poisoning, not an opioid overdose, so administering Narcan would not have changed the outcome.",false,True
+151,strategyqa_151,strategyqa,AF,True,Hulk's alter ego is Dr. Robert Bruce Banner Dr. Robert Bruce Banner is a nuclear physicist.  Nuclear physics is the field of physics that studies atomic nuclei and their constituents and interactions. ,Can Hulk's alter ego explain atomic events?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Bruce Banner is described as a nuclear physicist, and nuclear physics specifically deals with the study of atomic nuclei, their constituents, and interactions—i.e., atomic events. Therefore, as a nuclear physicist, he is qualified to explain atomic events.",true,True
+152,strategyqa_152,strategyqa,AF,False,Rand Paul is a senator from Kentucky. Rand Paul was an ophthalmologist in Kentucky with ABO certification. The National Board of Ophthalmology does not recognize ABO certification. Kentucky does not require ophthalmologists to be certified. NY ophthalmologists must have approved application for licensure certifications.,Can a New Yorker get their eyes checked by Rand Paul legally?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A medical encounter is governed by the laws of the state in which the service is performed. Rand Paul is licensed to practice medicine in Kentucky, and Kentucky does not require any particular board certification for an ophthalmologist. Therefore, if a New Yorker travels to Kentucky and is examined by Rand Paul there, the encounter complies with Kentucky law and is legal. New York’s licensure rules do not apply because the service is not rendered within New York.",true,False
+153,strategyqa_153,strategyqa,AF,True,Strawberry can suffer from black root rot and nematodes. Dogs can suffer from a variety of worms including roundworms that lay eggs on them. Nematodes are parasites that are also called roundworms and ascarids. Nematodes are parasites that feed off of strawberry plants.,Can a strawberry get worms similar to dogs?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Dogs can be infected with roundworms, which are a type of nematode. The context states that strawberries can also be parasitized by nematodes (roundworms). Since both strawberries and dogs can be afflicted by the same class of parasite, a strawberry can indeed get worms similar to those that infect dogs.",true,True
+154,strategyqa_154,strategyqa,AF,False,Edward Snowden has an active twitter account and has been on political commentary shows. Edward Snowden's country of residence is listed on his Wikipedia.,Is Edward Snowden in hiding from the United States?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Edward Snowden’s current residence is publicly known (Russia) and he maintains a visible public presence through an active Twitter account and televised appearances. Someone who is in hiding would keep their location and identity concealed, whereas Snowden’s whereabouts and activities are openly disclosed. Therefore, he is not in hiding from the United States.",false,True
+155,strategyqa_155,strategyqa,AF,False,84.70% of people in Japan with breast cancer survive 86.20% of people in Sweden with breast cancer survive,Is someone more likely to survive having breast cancer in Japan than in Sweden?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Japan has a 84.70 % survival rate, while Sweden has a higher 86.20 % survival rate; therefore, survival is less likely in Japan than in Sweden.",false,True
+156,strategyqa_156,strategyqa,AF,True,"In the movie, Alice meets the Mad Hatter. The Mad Hatter is having a tea party to celebrate his Unbirthday. The Unbirthday is a holiday which happens every day of the year which is not the subject's actual birthday.",Does Disney's Alice in Wonderland involve the celebration of a holiday?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that in the movie Alice meets the Mad Hatter, who is having a tea party to celebrate his Unbirthday, explicitly defined as a holiday. Therefore, Disney's Alice in Wonderland does involve the celebration of a holiday.",true,True
+157,strategyqa_157,strategyqa,AF,True,"Electrochemical nerve signals are fired after death that can cause a body to twitch. If death by hanging is accomplished due to asphyxia, the victim may attempt to free themselves or may appear to struggle.",Do bodies movie during hanging?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that electrochemical nerve signals fired after death can cause twitching, and if death by hanging is through asphyxia the victim may attempt to free themselves or appear to struggle, indicating movement of the body during hanging.",true,True
+158,strategyqa_158,strategyqa,AF,True,The animals that Yetis are said to look similar to are able to use their hands or toes to grasp items The ability to grasp with hands or other limbs is to be prehensile. ,Would a Yeti be likely to have prehensile limbs?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that animals Yetis resemble can grasp items with their hands or toes, which is the definition of prehensile limbs. If Yetis look similar to these animals, it is reasonable to infer they would share this characteristic, making it likely that Yetis would have prehensile limbs.",true,True
+159,strategyqa_159,strategyqa,AF,True,"55% of the Reddit user base comes from the United States. Congressional sessions open with the recital of the Pledge, as do many government meetings at local levels, and meetings held by many private organizations. All states except California, Hawaii, Iowa, Vermont, and Wyoming require a regularly scheduled recitation of the pledge in public schools.",Are the majority of Reddit users familiar with the Pledge of Allegiance?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+55 % of Reddit users are from the United States, giving Americans a numerical majority on the platform. In the United States the Pledge of Allegiance is routinely recited in schools and many government or civic meetings, making it widely known among Americans. Therefore, since a majority of Reddit users are Americans who are familiar with the Pledge, the majority of Reddit users are familiar with the Pledge of Allegiance.",true,True
+160,strategyqa_160,strategyqa,AF,False,"Augustus was given the name Gaius Octavius at birth. After he was adopted by his uncle Julius Caesar, he took the name Gaius Iulius Caesar. He took the name Augustus upon the breaking of the ruling Triumvirate and becoming Emperor.",Was Augustus his real name?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Augustus was born Gaius Octavius, later became Gaius Julius Caesar through adoption, and only took the name Augustus when he became emperor, so “Augustus” was not his original given name.",false,True
+161,strategyqa_161,strategyqa,AF,True,Roll call is when teachers call the names of students and they raise their hand to show they are present. The founder of Redenbacher popcorn was Orville Redenbacher. Reggae musician Shaggy was born Orville Richard Burrell.,Would Shaggy and Redenbacher popcorn founder both raise hand during first name roll call?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+During roll call, the teacher calls students by their first names. Both the reggae musician Shaggy (whose given first name is Orville) and the popcorn founder Orville Redenbacher share the same first name, Orville. Therefore, when “Orville” is called, both individuals would raise their hands to indicate their presence.",true,True
+162,strategyqa_162,strategyqa,AF,False,"In areas where professional medical abortions are illegal, women get unsafe illegal abortions from unlicensed practitioners.  Women have successfully aborted their own children through physical or chemical means for centuries.",Is there any absolute way to prevent abortion?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The question asks whether an absolute (sure-fire, 100% effective) method exists to prevent abortions. The context explains that even when legal, safe medical abortions are not available, women still seek and obtain abortions through unsafe or clandestine means, and that women have managed to terminate pregnancies by various methods for centuries. This historical persistence shows that prohibitions or restrictions cannot fully eliminate abortion; people still find ways. Therefore, no absolute way to prevent all abortions exists.",false,True
+163,strategyqa_163,strategyqa,AF,False,Antarctica has no permanent residents. Exposure to the elements would be deadly for homeless people during certain times of year.,Does Antarctica have a lot of problems relating to homelessness?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Antarctica has no permanent residents, so there is no resident population that could experience homelessness; therefore it does not face significant homelessness issues.",false,True
+164,strategyqa_164,strategyqa,AF,True,Immersion Baptism is the practice of submerging people underwater for a religious ritual. Jeff Buckley was an acclaimed singer that died of drowning in 1997. A baby in Moldova died from Immersion Baptism in 2010.,Can Immersion Baptism lead to a death like Jeff Buckley's?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Immersion baptism requires submerging a person underwater, and if the individual is unable to breathe or is mishandled, drowning can occur. The cited case of the Moldovan baby who died during immersion baptism in 2010 shows that this ritual can indeed result in fatal drowning. Jeff Buckley’s death was likewise due to drowning, though in a different context. Since both involve the same lethal mechanism—water inhalation leading to drowning—it is possible for immersion baptism to result in a death comparable to Jeff Buckley’s.",true,True
+165,strategyqa_165,strategyqa,AF,True,Koala joeys (babies) enter their mother's pouch when they are about 2 to 3 centimeters long. An American nickel is 2.12 centimeters in diameter.,Would a nickel fit inside a koala pouch?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A newborn koala joey that successfully fits into the pouch measures about 2–3 cm in length. An American nickel, at 2.12 cm across, is within this size range, so an object the size of a nickel could also fit inside the pouch.",true,True
+166,strategyqa_166,strategyqa,AF,False,A hurricane force wind warning is issued by the National Weather Service for winds above 74 mph  Solo student parachuters are prohibited from jumping in winds exceeding 14 mph,Can parachuting amateurs ignore hurricane force winds bulletins?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Hurricane-force winds are above 74 mph, far exceeding the 14 mph limit set for student parachutists. Therefore amateur parachuters must heed such bulletins and must not jump, so they cannot ignore them.",false,True
+167,strategyqa_167,strategyqa,AF,True,The average snow leopard weighs 72 pounds. The favorite food of snow leopards is an ibex. The average weight of an ibex is 150 pounds.,Can a snow leopard eat twice its own body weight?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Twice the average snow leopard’s weight is 72 × 2 = 144 pounds. The ibex they prey on averages 150 pounds, which is heavier than 144 pounds. Since snow leopards eat ibex, they are capable of eating more than twice their own body weight, so the statement is true.",true,True
+168,strategyqa_168,strategyqa,AF,False,"Alfa Romeo is a brand of automobile Starbucks sells coffee, tea, food, and some drink products like thermoses",Can you order an Alfa Romeo at Starbucks?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Alfa Romeo refers to cars, while Starbucks’ offerings are limited to beverages, food, and related drink ware; cars are not among the products they sell, so you cannot order an Alfa Romeo there.",false,True
+169,strategyqa_169,strategyqa,AF,True,The native Hawaiian people believed Pearl Harbor was the home of Kaʻahupahau. Kaʻahupahau is a shark goddess in Hawaiian legends. ,Is Pearl Harbor the mythical home of a shark goddess?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that native Hawaiian people believed Pearl Harbor was the home of Kaʻahupahau, who is described as a shark goddess. Therefore, Pearl Harbor is indeed regarded in myth as the home of a shark goddess.",true,True
+170,strategyqa_170,strategyqa,AF,False,"Weather phenomena refers to types of weather caused conditions such as cyclones, storms, and tsunamis. Minor league baseball teams include the Brooklyn Cyclones and Lake Elsinore Storm.",Were weather phenomena avoided when naming minor league baseball teams?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The minor league baseball teams explicitly use weather-related names—“Cyclones” and “Storm.” Therefore, weather phenomena were not avoided when naming these teams; they were embraced.",false,True
+171,strategyqa_171,strategyqa,AF,True,Fraktur is a type of font that originated in Germany. Fraktur was used on official Nazi documents. Fraktur was used on the cover of Hitler's Mein Kampf.,Does Fraktur have a sordid history?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Fraktur was prominently employed by the Nazi regime, appearing on official documents and even on the cover of Hitler’s Mein Kampf, linking the font to the propagandistic machinery of a brutal dictatorship; this association gives the typeface a disreputable, or sordid, historical connotation.",true,True
+172,strategyqa_172,strategyqa,AF,False,"Jujutsu is a Japanese martial art that uses unarmed combat to subdue opponents. Nick Newell, a congenital amputee, got his black belt after two straight submission wins. Fighter Aaron LaPointe has succeeded in martial arts with a fully paralyzed arm.",Are all limbs required for jujutsu?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context describes practitioners who have achieved success in jujutsu despite lacking the use of one limb (Nick Newell without part of an arm and Aaron LaPointe with a paralyzed arm). Their accomplishments show that full use of every limb is not necessary for practicing or excelling in jujutsu, so the statement that all limbs are required is false.",false,True
+173,strategyqa_173,strategyqa,AF,False,Bugs Bunny was created in the late 1930s. Mickey Mouse was created in 1928. Mickey Mouse appears in Disney cartoons. Bugs Bunny appears in Warner Bros. cartoons.,Did Mickey Mouse appear in a cartoon with Bugs Bunny in 1930?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Bugs Bunny did not exist until the late 1930s, so he could not have appeared in any 1930 cartoon. Therefore Mickey Mouse could not have appeared in a cartoon with Bugs Bunny in that year.",false,True
+174,strategyqa_174,strategyqa,AF,True,Jack Sparrow is the main character of the popular 'Pirates of the Caribbean' movie franchise. Jack Sparrow is the captain of a pirate ship. Jack Sparrow sings many songs while on the sea.,Does Jack Sparrow know any sea shantys?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that Jack Sparrow “sings many songs while on the sea.” Sea shanties are a type of song traditionally sung by sailors at sea, so if he regularly sings songs in that setting, he must know at least some sea shanties.",true,True
+175,strategyqa_175,strategyqa,AF,False,"Ahura Mazda is a deity of Zoroastrianism, a contemporary religion Zeus is a deity of Greek mythology",Does Ahura Mazda have a rivalry with Zeus?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Ahura Mazda belongs to Zoroastrianism and Zeus to Greek mythology; they originate from separate religious traditions with no shared narrative portraying them as opponents, so no rivalry exists between them",false,True
+176,strategyqa_176,strategyqa,AF,False,The Supreme Court of the United States is the final court ad has final say in judicial matters. The High Courts of Justice in Spain rule over single communities. The Supreme Court of Spain is the highest court in Spain and can overrule lesser courts.,Is Supreme Court of the United States analogous to High Courts of Justice of Spain?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Supreme Court of the United States is the highest court of the entire nation, whereas the High Courts of Justice in Spain are regional courts with authority limited to individual autonomous communities. Therefore, they are not analogous; the U.S. Supreme Court is more comparable to the Supreme Court of Spain, not to the High Courts of Justice.",false,True
+177,strategyqa_177,strategyqa,AF,True,Binary options tend to have 2 instead of 10 as a base.  Binary directly describes something composed of 2 things. ,Could boolean algebra be described as binary?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Boolean algebra is based on two distinct truth values—true and false. Because it fundamentally operates with exactly two possible states, it fits the definition of something “binary,” which involves only two alternatives.",true,True
+178,strategyqa_178,strategyqa,AF,False,Kane is a member of the Republican Party Joe Biden is a member of the Democratic Party Primaries are conducted between members of the same political party,Can Kane challenge Joe Biden in this year's primaries?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Kane is a Republican and Joe Biden is a Democrat. Primaries are only held among candidates of the same party, so a Republican cannot compete against a Democrat in a Democratic primary (or vice versa). Therefore, Kane cannot challenge Joe Biden in this year's primaries.",false,True
+179,strategyqa_179,strategyqa,AF,False,Richard III was King of England and Lord of Ireland from 1483-1485. Adelaide is a city in South Australia.,Was Richard III ruler of Adelaide?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Richard III ruled England and Ireland in the 1480s, centuries before the city of Adelaide was founded in South Australia in 1836; therefore he was never its ruler.",false,True
+180,strategyqa_180,strategyqa,AF,True,The Capitol building is located at one end of the National Mall in downtown Washington DC. The White House is located next to the Washington Monument a short way down from the Mall.,Is the United States Capitol located near the White House?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context says the Capitol sits at one end of the National Mall, while the White House is beside the Washington Monument farther down from the Mall. Since they are positioned at different points along the Mall rather than next to each other, the description does not indicate that they are near one another.",false,False
+181,strategyqa_181,strategyqa,AF,False,Dosa are thin rice pancakes from South India. One dosa is approximately 110 calories. The average lumberjack would eat 8000 calories per day.,Would lumberjacks get full after eating three dosa?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Three dosa provide about 330 calories (3 × 110). Lumberjacks typically consume roughly 8000 calories per day, so 330 calories is far below their usual intake and would not make them feel full.",false,True
+182,strategyqa_182,strategyqa,AF,False,Bill Clinton was impeached in 1998. Bill Clinton remained in office until 2001.,Did the Presidency of Bill Clinton conclude with his impeachment?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Bill Clinton was impeached in 1998, yet he continued to serve as president until 2001, showing that his presidency did not end with the impeachment.",false,True
+183,strategyqa_183,strategyqa,AF,False,A white belt is the lowest ranking in Brazilian jiu-jitsu. Jon Jones has a purple belt in Brazilian jiu-jitsu under Roberto Alencar. A purple belt is the second highest ranking in Brazilian jiu-jitsu. Jon Jones is one of the greatest combat sports athletes to ever live.,Could a white belt defeat Jon Jones in a Brazilian jiu-jitsu match?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A white belt is a beginner, the lowest rank in Brazilian jiu-jitsu, while Jon Jones holds a purple belt, the second highest rank, and is described as one of the greatest combat sports athletes ever. Given the large skill gap implied by the belt rankings and Jones’s elite athletic ability, it is overwhelmingly unlikely that a white belt could defeat him in a Brazilian jiu-jitsu match.",false,True
+184,strategyqa_184,strategyqa,AF,False,"Menthol is the main component of peppermint oil and is responsible for the noticeable cooling sensation.  During Thanksgiving, turkey, potatoes, gravy, and pie are common dishes. None of which have menthol in it.",Is Menthol associated with Thanksgiving?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context highlights menthol as a component of peppermint oil, while typical Thanksgiving foods such as turkey, potatoes, gravy, and pie contain no menthol. This indicates no connection between menthol and the holiday’s customary dishes, so menthol is not associated with Thanksgiving.",false,True
+185,strategyqa_185,strategyqa,AF,True,Super Mario is a video game. Video games are played on electronic devices. Electronic devices require electricity to function.,Does Super Mario require electricity to play?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Super Mario is categorized as a video game. The context states that video games are played on electronic devices, and that electronic devices require electricity to function. Therefore, playing Super Mario entails using an electronic device, which in turn necessitates electricity.",true,True
+186,strategyqa_186,strategyqa,AF,False,"Brewing a batch of beer takes at least 5 weeks. There are 30 days, or 4 1/2 weeks, in the month of September.",Could you brew beer from start to finish in the month of September?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Brewing needs a minimum of 5 weeks, but September supplies only 4 ½ weeks (30 days). Since the available time is shorter than the required duration, the brewing process cannot be completed within September.",false,True
+187,strategyqa_187,strategyqa,AF,False,"Amtrak is a series of railways that transport people to various locations. The Moai are ancient stone statue faces that are a popular tourist destination. The Moai are located on Easter Island, an island in the Pacific ocean, near Chile.",Does Amtrak run from NYC directly to the Moai location?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Amtrak only operates passenger trains within the United States, while the Moai are on Easter Island in the Pacific Ocean near Chile. There is no rail connection, let alone a direct Amtrak route, linking New York City to Easter Island, so Amtrak cannot run directly to the Moai location.",false,True
+188,strategyqa_188,strategyqa,AF,True,Friday the 13th is known as an unlucky Friday because of the number 13. A year can have as many as three Friday the 13ths. One Friday the 13th is the average per year. There were 3 Friday the 13ths in 2015.,Does 2015 have more unlucky Friday's than usual?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The average year has one Friday the 13th, but 2015 had three of them, which is above the usual number, so 2015 indeed had more unlucky Fridays than normal.",true,True
+189,strategyqa_189,strategyqa,AF,True,Tony Bennett's full name is Anthony Dominick Benedetto. Dominick Cruz is a two-time UFC Bantamweight Champion.,Is Tony Bennett's middle name shared by a former UFC champion?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Tony Bennett’s middle name is Dominick, and there has been a UFC champion named Dominick Cruz; therefore, the middle name is indeed shared with a former UFC champion.",true,True
+190,strategyqa_190,strategyqa,AF,True,"A thermonuclear bomb, also called a hydrogen bomb, uses hydrogen under high temperatures to create an explosive reaction. While chopping onions, cells inside the onion are broken and the gas that comes out forms sulfenic acid. Sulfenic acid is composed of several elements including hydrogen.",Can chemicals in onion help create a thermonuclear bomb?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Thermonuclear bombs rely on nuclear fusion of specific hydrogen isotopes (deuterium and tritium) at tens of millions of degrees, achieved using sophisticated nuclear materials and engineering. The sulfenic acid released when cutting an onion merely contains ordinary hydrogen atoms bonded in organic molecules; it exists in trace amounts at room temperature and lacks the required isotopes, concentration, and extreme conditions for fusion. Therefore, chemicals from onions cannot meaningfully contribute to building or fueling a thermonuclear bomb.",false,False
+191,strategyqa_191,strategyqa,AF,False,The criteria for a strong password according to cybersecurity company Avast is: at least 15 characters. uppercase letters. lowercase letters. numbers. and symbols. The standard alphabet contains twenty six letters but no special characters. Binary numbers only contain 0 and 1.,Can binary numbers and standard alphabet satisfy criteria for a strong password?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The criteria demand the presence of all four character types: uppercase letters, lowercase letters, numbers, and symbols. Combining the standard alphabet (which supplies uppercase and lowercase letters but no symbols) with binary numbers (which give only the digits 0 and 1) still leaves out symbols entirely, so the full set of requirements cannot be met.",false,True
+192,strategyqa_192,strategyqa,AF,False,"Saddam Hussein died on December 30th, 2006. Donald Trump was inaugurated as the President of the United States on January 20, 2017.",Did Saddam Hussein witness the inauguration of Donald Trump?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Saddam Hussein died more than ten years before Donald Trump’s inauguration date, so he could not have been alive to witness it.",false,True
+193,strategyqa_193,strategyqa,AF,False,Algae grows on sloths Sloth moths feed on algae that grows on sloths Sloth moth caterpillars feed on sloth dung  Sloths defecate far from their ususl abode,Do moths that live on sloths have family dinners?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Adult sloth moths remain on the sloth’s fur and feed on the algae there, while their caterpillars develop separately in sloth dung on the forest floor. Because the life stages eat in different places and on different foods, the moth parents and their offspring do not gather to eat together; hence they do not have “family dinners.”",false,True
+194,strategyqa_194,strategyqa,AF,False,Wrestlemania X took place in 1994 The Toyota Prius was first manufactured in 1997,Could someone have arrived at Wrestlemania X in a Toyota Prius?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Wrestlemania X happened in 1994, but the Toyota Prius was not manufactured until 1997, so the car did not yet exist for someone to arrive in at the event.",false,True
+195,strategyqa_195,strategyqa,AF,False,Johnny Carson had 3 children. Water polo teams consist of 7 players.,Could Johnny Carson's children fill out a water polo team?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Johnny Carson had only 3 children, but a water-polo team needs 7 players, so his children alone are insufficient to make a full team.",false,True
+196,strategyqa_196,strategyqa,AF,True,"Newborn kittens are small enough to fit in an average human hand. The average human hand is 7 inches. An Amtrak coach seat is 39"" x 23"".",Would three newborn kittens fit on a standard Amtrak coach seat?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+A newborn kitten fits within the 7-inch span of an average human hand. Even if we treat each kitten as occupying a 7-inch square, lining up three of them would need at most 3 × 7 = 21 inches in one dimension, which is less than both dimensions of an Amtrak coach seat (39 inches wide and 23 inches deep). Therefore three newborn kittens can easily fit on the 39"" × 23"" seat.",true,True
+197,strategyqa_197,strategyqa,AF,False,"Albany, GA has around 75,000 people Albany, NY has almost 100,000 people",Will the Albany in Georgia reach a hundred thousand occupants before the one in New York?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Albany, New York is already very close to 100 000 residents (“almost 100,000”), whereas Albany, Georgia is still much farther away at about 75 000. Since New York’s Albany will hit the 100 000 mark first, the one in Georgia will not reach that milestone before it.",false,True
+198,strategyqa_198,strategyqa,AF,False,sloth can climb trees in various positions. sloth can crawl along the ground on their stomachs. ,Will a sloth explode if it's not upside down?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that sloths can move and rest in multiple positions, including crawling on the ground, which implies they are sometimes right-side up. Nothing suggests they explode when not upside down, so the correct response is “false.”",false,True
+199,strategyqa_199,strategyqa,AF,False,Eddie Murphy was born in 1961. Car phones did not become commonplace in cars in America until 1984.,Could Eddie Murphy dial 911 in a car as a young child?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Eddie Murphy’s childhood years were in the 1960s and early 1970s. Car phones did not become commonplace until 1984, well after that period, so a typical car in which he rode as a child would not have had a phone he could use to dial 911.",false,True
+200,strategyqa_200,strategyqa,AF,False,"British TV series EastEnders has over 6,000 episodes as of 2020. It would take approximately 125 days to binge watch the entire EastEnders TV series. A human can last only 4 days without water.",Is it possible to binge entire EastEnders series without water?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Binge-watching all 6,000+ episodes requires about 125 days, but a person can survive only about 4 days without water; therefore, one would perish from dehydration long before finishing, making it impossible.",false,True
+201,strategyqa_201,strategyqa,AF,False,There are 12 eggs in a carton. Johnny Carson won 6 Emmys. 6 is less than 12.,Did Johnny Carson win enough Emmy's to fill a carton if Emmy's were eggs?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A full egg carton holds 12, but Johnny Carson won only 6 Emmys. Since 6 is fewer than 12, he would not have enough “Emmy-eggs” to fill the carton.",false,True
+202,strategyqa_202,strategyqa,AF,True,Lactobacillus species convert sugars they digest to lactic acid  The lactic acid of some Lactobacillus species is associated with tooth decay Dental procedures can be expensive without insurance,Is overfeeding Lactobacillus unwise for people without dental insurance?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Lactobacillus species ferment sugars into lactic acid, and the lactic acid produced by some of these bacteria contributes to tooth decay. If a person stimulates or “overfeeds” Lactobacillus (for example by supplying excess fermentable sugars), they would likely increase lactic‐acid production and thus raise their risk of cavities. Because dental treatments to repair decay are costly for those lacking dental insurance, increasing that risk would be imprudent. Therefore, overfeeding Lactobacillus is indeed unwise for people without dental insurance.",true,True
+203,strategyqa_203,strategyqa,AF,False,Beeswax food wrapping is typically made of two ingredients. Beeswax food wrap is composed of cotton fabric and beeswax. Neither cotton nor beeswax contains plastic.,Do beeswax alternatives to cling wrap use plsatic?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Beeswax wraps consist solely of cotton fabric infused with beeswax, and the context explicitly states that neither component contains plastic; therefore, these alternatives do not use plastic.",false,True
+204,strategyqa_204,strategyqa,AF,False,"Pan is famous for his sexual powers. Women who had had sexual relations with several men were referred to as ""Pan girls.""",Is Pan a symbol of virtue and virginity in women?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Pan is associated with strong sexuality, and women known for multiple sexual relations were called ""Pan girls""; this makes him a symbol of sexual activity, not of virtue or virginity.",false,True
+205,strategyqa_205,strategyqa,AF,True,"Door to door advertising involves someone going to several homes in a residential area to make sales and leave informational packets. During the COVID-19 pandemic, the CDC recommends that people limit their travel to essential needs only. During the COVID-19 pandemic, citizens are advised to stay home and to limit their interaction with others. During the COVID-19 pandemic, people are encouraged to remain six feet away from each other at all times. The more people that someone interacts with, the higher the likelihood of them becoming a vector for the COVID-19 virus.","During the pandemic, is door to door advertising considered inconsiderate?",answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Door-to-door advertising requires visiting many homes, increasing person-to-person contacts. The CDC guidance during the pandemic is to limit travel to essentials and stay six feet apart, minimizing interactions to reduce virus spread. Because the practice contradicts these recommendations and heightens risk for residents and the advertiser, it is regarded as inconsiderate during the pandemic.",true,True
+206,strategyqa_206,strategyqa,AF,False,"In a court of law, lying under oath is considered perjury.  Perjury is considered a crime.",Is it okay to lie after taking an oath in a court of law?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Lying under oath constitutes perjury, and perjury is a crime; therefore it is not acceptable to lie after taking an oath in court.",false,True
+207,strategyqa_207,strategyqa,AF,False,Farmers cultivate and produce crops and/or livestock for sale or consumption Circuit boards contain various man made materials as well as metals Metals are produced from the earth by miners,Do you need a farmer to make a circuit board?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A circuit board is manufactured from metals and synthetic materials obtained through mining and industrial chemistry, not from agricultural products. Therefore a farmer’s work is not required for fabricating a circuit board.",false,True
+208,strategyqa_208,strategyqa,AF,False,The Israelis are an ethnic group The Hammerstein Ballroom is a venue for concerts and musical performances,Have the Israelis played the Hammerstein Ballroom?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states only that Israelis are an ethnic group and that Hammerstein Ballroom is a concert venue; it provides no information that the Israelis (as an ethnic group or a performing act) have performed there, so the answer is negative.",false,True
+209,strategyqa_209,strategyqa,AF,False,The digits of Pi are infinite.  The human mind cannot hold an infinite amount of information.,Can every digit in Pi be memorized?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Pi has infinitely many digits, but human memory is finite; therefore it is impossible for a person to memorize an infinite sequence, so every digit of Pi cannot be memorized.",false,True
+210,strategyqa_210,strategyqa,AF,True,"Earth orbits around the Sun in 365 days. Napoleonic Wars lasted 12 years, 5 months and 4 weeks.",Did earth complete at least one orbit around the sun during the Napoleonic Wars?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Napoleonic Wars lasted 12 years, 5 months, and 4 weeks, which is over 12 years. A single Earth orbit takes 1 year (365 days). Since the duration of the wars is far longer than one year, Earth completed many orbits—including at least one—during that period.",true,True
+211,strategyqa_211,strategyqa,AF,False,Viscosity is resistance of fluid to deformation. Water is not resistant to deformation.,Does water have viscosity?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Viscosity is defined as a fluid’s resistance to deformation, and the context explicitly states that water is not resistant to deformation; therefore, according to the given information, water does not possess viscosity.",false,True
+212,strategyqa_212,strategyqa,AF,False,Snoopy is a fictional dog. Fictional animals cannot transmit diseases to real people.,Could Snoopy transmit rabies?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Snoopy is explicitly identified as a fictional dog, and the context states that fictional animals cannot transmit diseases to real people. Therefore, Snoopy could not transmit rabies.",false,True
+213,strategyqa_213,strategyqa,AF,True,The average cost of a US Boeing 737 plane is 1.6 million dollars. Wonder Woman (2017 film) grossed over 800 million dollars at the box office.,Is a Boeing 737 cost covered by Wonder Woman (2017 film) box office receipts?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Wonder Woman earned over 800 million dollars. The cost of a Boeing 737 is 1.6 million dollars, which is far less than 800 million. Therefore the box-office receipts are more than enough to cover the cost of the plane.",true,True
+214,strategyqa_214,strategyqa,AF,True,The Porsche 992 Turbo S can accelerate to 62 mph in 2.7 seconds. Usain Bolt's top speed ever measured is 27.79 mph.,Could a Porsche 992 Turbo S defeat Usain Bolt in a 100 meter sprint?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+To cover 100 m, estimate the car’s motion from its 0–62 mph (0–27.78 m/s) figure:
+
+1. Assume constant acceleration to 27.78 m/s in 2.7 s.  
+   a = v/t = 27.78 m/s ÷ 2.7 s ≈ 10.3 m/s².  
+   Distance in this phase: s = ½ a t² = 0.5 × 10.3 × (2.7)² ≈ 37.5 m.
+
+2. Distance left: 100 m – 37.5 m = 62.5 m.  
+   Traveling this at 27.78 m/s takes t = 62.5 m ÷ 27.78 m/s ≈ 2.25 s.
+
+3. Total car time ≈ 2.7 s + 2.25 s = 4.95 s.
+
+Usain Bolt’s world-record 100 m is 9.58 s, with a top speed of 27.79 mph (≈12.4 m/s), far slower on average than the car’s 100 m time.
+
+Since 4.95 s < 9.58 s, the Porsche 992 Turbo S would comfortably beat Usain Bolt in a 100 m sprint.",true,True
+215,strategyqa_215,strategyqa,AF,False,"Polar Bears live in the Arctic, with temperatures that can get as low as -35 degrees celsius. Ancient Greece had an average temperature of 24 degrees celsius.",Did Polar Bears roam around in Ancient Greece?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Polar bears are native to the Arctic, thriving in environments with temperatures far below freezing. Ancient Greece had a much warmer average temperature of about 24 °C, which is unsuitable for polar bears’ survival needs. Hence, polar bears would not have roamed Ancient Greece.",false,True
+216,strategyqa_216,strategyqa,AF,True,A zoot suit was a man's suit of an exaggerated style popular in the 1940s. Triton is one of the coldest planets in the solar system. Triton is located about 2.8 billion miles from the warmth of the sun. Triton has an average temperature of -235.0°C A zoot suit is made of thin material such as cloth.,Would hypothermia be a concern for a human wearing zoot suit on Triton?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Triton’s average temperature is −235 °C, far below survivable levels. A zoot suit is only thin cloth and offers virtually no insulation against such extreme cold. Therefore a human wearing just a zoot suit on Triton would rapidly lose body heat and face life-threatening hypothermia.",true,True
+217,strategyqa_217,strategyqa,AF,False,"Arnold Schwarzenegger deadlifted 710 pounds in a competition. The world deadlift record is 1,104 pounds, set by Game of Thrones actor Hafthor Bjornsson. The weight of an adult Black rhinoceros is between 1,800 – 3,100 pounds.",Can Arnold Schwarzenegger deadlift an adult Black rhinoceros?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Arnold’s best deadlift is 710 lb, while the lightest adult black rhinoceros weighs about 1,800 lb—more than twice his maximum lift—so he could not lift an adult black rhinoceros.",false,True
+218,strategyqa_218,strategyqa,AF,True,ABBA contained two male and two female members. Mixed doubles tennis games consist of two teams of one man and one woman on each.,Could ABBA play a mixed doubles tennis game against each other?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+ABBA had exactly two men (Björn and Benny) and two women (Agnetha and Anni-Frid). A mixed doubles tennis match needs two teams, each made up of one man and one woman, which requires in total two men and two women. Since ABBA’s lineup matches those numbers, they could divide into two mixed-gender pairs and play a mixed doubles game against each other.",true,True
+219,strategyqa_219,strategyqa,AF,False,Surgery is used to correct medical problems or make physical alterations to the body An existential crisis is a metaphysical affliction,Can surgery prevent an existential crisis?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Surgery addresses physical conditions—it can repair organs or alter appearance—but an existential crisis concerns philosophical questions about meaning and purpose. Since surgery does not engage with metaphysical or psychological issues, it cannot prevent an existential crisis.",false,True
+220,strategyqa_220,strategyqa,AF,True,"Without insurance, a CT scan can cost up to $5,000. Most insurance companies will cover or reimburse the cost of a CT scan.",Would an uninsured person be more likely than an insured person to decline a CT scan?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Uninsured patients must pay up to $5,000 out of pocket for a CT scan, whereas insured patients usually have the cost covered or reimbursed. The high personal expense makes uninsured individuals more inclined to refuse the scan compared with insured individuals who face little or no cost barrier.",true,True
+221,strategyqa_221,strategyqa,AF,False,"The Napoleonic Wars took place between 1803 and 1815. Nuclear bombs have only been used in warfare twice, both times in 1945.",Was a nuclear bomb used in the Napoleonic Wars?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Napoleonic Wars ended in 1815, but nuclear bombs were first and only used in 1945. Since no nuclear weapons existed during 1803-1815, none could have been used in the Napoleonic Wars.",false,True
+222,strategyqa_222,strategyqa,AF,True,Chlorophyll is a pigment in plants responsible for photosynthesis. Photosynthesis is the process by which plants release oxygen into the atmosphere. Humans need oxygen to live.,Would human race go extinct without chlorophyll?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+According to the context, chlorophyll is necessary for photosynthesis, and photosynthesis is the source of the oxygen plants release into the atmosphere. Humans require that atmospheric oxygen to survive. If chlorophyll were absent, photosynthesis—and thus the continual production of atmospheric oxygen—would cease, eventually depriving humans of the oxygen they need. Therefore, without chlorophyll the human race would go extinct.",true,True
+223,strategyqa_223,strategyqa,AF,False,"The Joker is a DC Comics villain. The Avengers are a group of heroes from Marvel Comics. Being from different publishers, they do not meet.",Was the Joker an enemy of the Avengers?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that the Joker is from DC Comics and the Avengers are from Marvel Comics, and since characters from different publishers do not meet, the Joker could not have been an enemy of the Avengers.",false,True
+224,strategyqa_224,strategyqa,AF,True,Messiah (Handel) is a 1741 Oratorio by George Frideric Handel. Messiah (Handel) requires the following instruments: 2 trumpets; timpani; 2 oboes; 2 violins; and a viola. Bruce Gandy is a world renowned bagpipe player.,Would Bruce Gandy be an odd choice for Messiah (Handel)?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Messiah’s score calls for trumpets, timpani, oboes, violins and viola, but no bagpipes. Since Bruce Gandy is known specifically as a bagpipe player, engaging him for a performance that does not use his instrument would indeed be unusual, making him an odd choice.",true,True
+225,strategyqa_225,strategyqa,AF,True,"German Shepherds have a height between 22 and 26 inches. Robert Wadlow was the tallest man ever, reaching a height of 8 ft 11.1 inches at his death.",Would Robert Wadlow tower over a German Shepherd?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Robert Wadlow’s height was 107.1 inches, while a German Shepherd’s maximum height is about 26 inches; Wadlow is roughly four times taller, so he would indeed tower over the dog.",true,True
+226,strategyqa_226,strategyqa,AF,True,Phileas Fogg is a character in Jules Verne's Around the World in Eighty Days. Phileas Fogg attempts to circumnavigate the globe in 80 days. Pope John Paul I reigned for only 33 days.,Phileas Fogg's around the world would be difficult to achieve during Pope John Paul I's reign?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Phileas Fogg’s journey requires 80 days, whereas Pope John Paul I’s reign lasted only 33 days. Since 33 days are insufficient to complete an 80-day circumnavigation, accomplishing the trip within that reign would indeed be difficult.",true,True
+227,strategyqa_227,strategyqa,AF,False,"Post Malone's body is covered with many tattoos. The most common method of tattooing in modern times is the electric tattoo machine, which inserts ink into the skin via a single needle or a group of needles that are soldered onto a bar, which is attached to an oscillating unit.",Does Post Malone have a fear of needles?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Post Malone sports numerous tattoos, which are applied with tattoo machines that repeatedly insert needles into the skin. Someone who is fearful of needles would be unlikely to willingly undergo that process many times, so it is reasonable to conclude that Post Malone does not have a fear of needles.",false,True
+228,strategyqa_228,strategyqa,AF,True,Smallville debuted on the CW in 2001. Smallville had the record of most CW seasons for a show with 10. Supernatural concluded its run with its record breaking 15th season on the CW.,Did Supernatural break 2001 CW debuting shows seasons record?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Smallville, which debuted on the CW in 2001, held the network’s season-count record with 10 seasons. Supernatural later ran for 15 seasons, surpassing that total. Therefore, Supernatural broke the season record previously set by the 2001-debuting show.",true,True
+229,strategyqa_229,strategyqa,AF,True,Tony Bennett had four children. Tony Bennet has had three wives.,Did Tony Bennett have more children than he had wives?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Tony Bennett had 4 children whereas he had 3 wives; 4 is greater than 3, so he indeed had more children than wives.",true,True
+230,strategyqa_230,strategyqa,AF,True,"Robocop was directed by Paul Verhoeven. Paul Verhoeven was born in Amsterdam, Netherlands. Gaite Jansen is an actress known for Jett and Peaky Blinders and was born in Rotterdam, Netherlands.",Is RoboCop director from same country as Gaite Jansen?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Paul Verhoeven, the director of RoboCop, was born in Amsterdam, Netherlands, and Gaite Jansen was born in Rotterdam, Netherlands. Both cities are in the Netherlands, so they are from the same country.",true,True
+231,strategyqa_231,strategyqa,AF,True,"In 2016, a black man playing Santa Claus at the Mall of America made national headlines. There are map websites dedicated to locating black Santa Claus mall actors.",Are most mall Santa Claus actors white?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context notes that a single black Santa at a major mall was newsworthy and that special websites are needed just to locate black mall Santas. This implies that black Santas are relatively uncommon, meaning most mall Santa Claus actors are white.",true,True
+232,strategyqa_232,strategyqa,AF,False,Telescopes are used to view things far away. Telescopes are an optical instrument. ,Can telescopes hear noise?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A telescope is described as an optical instrument, meaning it works with light to allow distant objects to be seen. Hearing noise requires an audio capability, which optical instruments do not possess. Therefore, telescopes cannot hear noise.",false,True
+233,strategyqa_233,strategyqa,AF,False,An airline with a perfect operation record has no crashes or other damaging incidents. United Airlines has had over 30 crash incidents over several decades.,Does United Airlines have a perfect operation record?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A perfect operation record requires zero crashes. The context states United Airlines has had over 30 crash incidents, so it does not meet the criterion.",false,True
+234,strategyqa_234,strategyqa,AF,True,"Tony Bennett is a legendary singer who will turn 94 years old in August 2020. Ramjit Raghav, the oldest man to have a baby, had his first child at age 94. Ramjit Raghav had his second child at age 96.",Could ancient Tony Bennett have a baby in 2020?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Tony Bennett will be 94 in 2020, and Ramjit Raghav successfully fathered children at both 94 and 96. Since a man of the same age has already done so, it is biologically possible for Tony Bennett, at 94, to father a baby in 2020.",true,True
+235,strategyqa_235,strategyqa,AF,True,"Keith Richards has a cameo appearance in two of the Pirates of the Caribbean movies. He plays Captain Teague, the elderly father of famous pirate Captain Jack Sparrow. In At World's End, he is the member of the council of Pirate Lords who is responsible for keeping the Pirate Code, and there is a brief shot of him and his crew aboard their ship during the sequence where the pirates are raising their banners in preparation to fight.",Does rock star Keith Richards play a captain of a boat in a movie?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Keith Richards appears in the Pirates of the Caribbean films as Captain Teague, a ship captain and father of Jack Sparrow, so he indeed portrays a boat captain in a movie.",true,True
+236,strategyqa_236,strategyqa,AF,False,Fair trade is an arrangement designed to help producers in developing countries achieve good trading. The United States is not considered a developing country.,Is the United States the largest exporter of Fair Trade products?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Fair trade products are primarily exported by producers in developing countries, whereas the United States is not classified as a developing country. Therefore, it would not be the largest exporter of Fair Trade products.",false,True
+237,strategyqa_237,strategyqa,AF,False,"The largest crustacean is the Japanese spider crab  The largest Japanese spider crabs have a leg span of just over 12 feet  The longer edge of a king-sized mattress is six feet, eight inches",Can the largest crustacean stretch out completely on a king-sized mattress?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The crab’s leg span is just over 12 ft, while the longer side of a king-sized mattress is only 6 ft 8 in (≈6.7 ft). Because 12 ft is much greater than 6.7 ft, the crab cannot fit fully extended on the mattress.",false,True
+238,strategyqa_238,strategyqa,AF,False,The Jewish religion regards the Old Testament as their holy book. The New Testament of the bible is not acknowledged by Jewish religious people. The Ten Commandments are in the Old Testamanet.,Were the Ten commandments the part of the bible that Jewish people do not believe in?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Ten Commandments are contained in the Old Testament, which Jewish people accept as holy scripture; they do not reject that part. It is the New Testament they do not acknowledge.",false,True
+239,strategyqa_239,strategyqa,AF,False,"A spider wasp is a kind of wasp, which is an insect. Insects all have six legs.",Do spider wasps have eight legs?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Spider wasps are insects, and all insects possess six legs; therefore, spider wasps cannot have eight legs.",false,True
+240,strategyqa_240,strategyqa,AF,False,"Turkey enjoys a wide variety of regional variations of börek among the different cultures and ethnicities composing it. Börek is very popular in the cuisines of the former Ottoman Empire, especially in North Africa and throughout the Balkans. Recep Tayyip Erdoğan is the current president of Turkey and he was born and raised there.",Would Recep Tayyip Erdoğan be unfamiliar with börek?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Börek is a popular and widespread dish in Turkey, and Erdoğan was born, raised, and lives in Turkey. Growing up in Turkish culture makes it very likely that he is familiar with börek, so he would not be unfamiliar with it.",false,True
+241,strategyqa_241,strategyqa,AF,True,Jack Black is a musician but not a composer Bear McCreary is a composer Their interests are similar but their skills not overlap in awards categories,Is Jack Black unlikely to compete with Bear McCreary for an award?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Jack Black is a musician but not a composer, while Bear McCreary is specifically a composer. Since award categories are tied to their distinct skills and those skills do not overlap, they would not be in the same award category, making competition between them unlikely.",true,True
+242,strategyqa_242,strategyqa,AF,True,Jerry Seinfeld is a fan of the New York Mets baseball team The New York Mets won a World Series title in 1986,Did Jerry Seinfeld have reason to cheer in 1986?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Jerry Seinfeld is a fan of the New York Mets, and the Mets won the World Series in 1986, giving him a clear reason to celebrate that year.",true,True
+243,strategyqa_243,strategyqa,AF,True,Zoology is the study of the behavior and classification of animals. Strigoi are spirits that can transform into animals in Romanian mythology. Zoology is based on science and fossils.,Is zoology unconcerned with strigoi?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Zoology is a scientific discipline that studies real animals, while strigoi are mythological spirits; since zoology deals with empirical, fossil-based evidence and not folklore entities, it is indeed unconcerned with strigoi.",true,True
+244,strategyqa_244,strategyqa,AF,True,"The sable is a species of marten, which make up the genus Martes. Wolverines are from the genus Gulo. Both the Martes and the Gulo are from the family Mustelidae.",Are sables related to wolverines?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Sables belong to the genus Martes and wolverines to the genus Gulo, but both genera are members of the same family, Mustelidae. Sharing the same family means they are taxonomically related, even though they are in different genera.",true,True
+245,strategyqa_245,strategyqa,AF,False,The Uniting Church in Australia is a combination of Methodist and Presbyterian congregations. Methodists and Presbyterians are Christians. Muhammed was the Muslim prophet and was not a Christian.,Was Muhammed a member of the Uniting Church in Australia?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Muhammed was the founder of Islam and explicitly identified as a Muslim, not a Christian. The Uniting Church in Australia is a Christian denomination formed from Methodist and Presbyterian traditions. Since Muhammed was neither Christian nor alive at the time the Uniting Church existed, he could not have been a member.",false,True
+246,strategyqa_246,strategyqa,AF,False,A sonnet is a fourteen line poem that follows certain rhyme schemes. Jabberwocky is an 1871 poem by Lewis Carroll. Jabberwocky is a 28 line poem that uses nonsense words.,Can Jabberwocky be considered a sonnet?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A sonnet is defined in the context as a poem of exactly fourteen lines that follows specified rhyme schemes. Jabberwocky, however, contains 28 lines and therefore does not meet the line-count requirement for a sonnet, regardless of any other features.",false,True
+247,strategyqa_247,strategyqa,AF,True,The mongoose originated  in the Neogene geological period. Rhinos are from the Paleogene geological period. The Paleogene period spans 43 million years from the end of the Cretaceous Period 66 million years ago to the beginning of the Neogene Period.,Did mongoose come from later period than rhinos?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Rhinos appeared in the Paleogene, which immediately precedes the Neogene. Mongooses originated in the Neogene, which follows the Paleogene, so mongooses come from a later geological period than rhinos.",true,True
+248,strategyqa_248,strategyqa,AF,False," King Ferdinand and Queen Isabella funded Columbus' voyage to the New World. King Ferdinand of Argon and Queen Isabella of Castille were the joint rulers of kingdoms of the Iberian Peninsula, which included modern-day Spain but excludes Portugal.  King John II of Portugal rejected Columbus' request for funding. ",Did Columbus obtain his funding from the rulers of the Portugese Empire?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Columbus first asked King John II of Portugal for support but was rejected. He then secured funding from King Ferdinand and Queen Isabella, rulers of Spain, not Portugal. Therefore, he did not obtain funding from the Portuguese Empire.",false,True
+249,strategyqa_249,strategyqa,AF,True,Swallowing disorders can make thin liquids like water dangerous to drink. Liquid thickeners are marketed towards people with difficulty drinking.,Do people with swallowing disorders need high viscosity drinks?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that thin liquids such as water can be dangerous for individuals with swallowing disorders and that liquid thickeners are sold specifically for people who struggle to drink safely. Thickeners increase a beverage’s viscosity, turning it into a higher-viscosity drink that is easier and safer for them to swallow. Therefore, people with swallowing disorders require high-viscosity drinks.",true,True
+250,strategyqa_250,strategyqa,AF,False,"Deafness exists on a spectrum of total hearing loss to partial hearing loss. Individuals with total hearing loss can still enjoy the bass and beat of music through vibration. Deaf people with cochlear implants can hear music, albeit in a different way than hearing people.",Are deaf people left out of enjoying music?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that deafness ranges from partial to total, and even those with total hearing loss can enjoy music through vibrations. Additionally, deaf individuals with cochlear implants can perceive music differently but still hear it. Therefore, deaf people are not excluded from enjoying music.",false,True
+251,strategyqa_251,strategyqa,AF,False,"The Eighth Amendment (Amendment VIII) of the United States Constitution prohibits the federal government from imposing excessive bail, excessive fines, or cruel and unusual punishments. The First Amendment (Amendment I) to the United States Constitution protects freedom of speech.",Does the Eighth Amendment to the United States Constitution protect freedom of speech?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context explains that the Eighth Amendment deals only with prohibitions on excessive bail, excessive fines, and cruel and unusual punishments, while the protection of freedom of speech is explicitly assigned to the First Amendment. Therefore, the Eighth Amendment does not protect freedom of speech.",false,True
+252,strategyqa_252,strategyqa,AF,True,"The Tsar was the highest ruler in several eastern countries. A duke was a title given to important european nobles. Dukes ranked below princes, kings, and queens. Tsars were the equivalents of English Kings.",Would a duke hypothetically be subservient to a Tsar?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+According to the context, a Tsar is equivalent to a king, and a duke ranks below a king. Since someone of lower rank would be subordinate to someone of higher rank, a duke would hypothetically be subservient to a Tsar.",true,True
+253,strategyqa_253,strategyqa,AF,False,"Some common substances that help rashes are creams, oils, and petroleum based products. CAS number 8009-03-8 is the identifier number for petroleum jelly.",Is CAS number 8009-03-8 harmful for a rash?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that petroleum-based products, including petroleum jelly (CAS 8009-03-8), are among the common substances that help rashes, implying they are beneficial rather than harmful.",false,True
+254,strategyqa_254,strategyqa,AF,True,"Sony is the maker of the Playstation which has sold over 108 million PS4 units by March 2020. Sega's last console, the Sega Dreamcast, was discontinued in 2001. Sony Playstation competed with Sega's Dreamcast and Saturn systems in the 1990s. Sega now makes games for its former competitor, Sony, including Team Sonic Racing in 2019. At the height of the console wars, Sega Saturn sold 9.5 million units while Sony Playstation sold 102 million units.",Did Sony definitively win the video game war against Sega?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Sony’s consoles vastly outsold Sega’s (PlayStation 102 million vs. Saturn 9.5 million), Sega withdrew from the console hardware market entirely after discontinuing Dreamcast in 2001, and Sega now publishes games for Sony systems. These facts show Sony decisively prevailed in their competition.",true,True
+255,strategyqa_255,strategyqa,AF,True,"People with Anorexia Nervosa restrict food and as a result lack essential nutrients. Many people with Anorexia Nervosa, are at high risk for osteoporosis(and to a lesser extent bulimia nervosa) will have low bone density and consequently reduced bone strength. People with Anorexia Nervosa, are at high risk for osteoporosis. ",Would a person with Anorexia nervosa be more likely to break a bone than a regular person?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Anorexia nervosa leads to nutrient deficiencies that cause osteoporosis-like loss of bone density and strength. Lower bone density makes bones more fragile, so someone with anorexia nervosa faces a higher probability of fractures compared with a person whose bone density is normal.",true,True
+256,strategyqa_256,strategyqa,AF,False,The Wehrmacht was the unified military of Germany from 1935 to 1945 The War to End All Wars is a nickname for World War I World War I ended in 1918,Did the Wehrmacht affect the outcome of the War to End All Wars?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The War to End All Wars (World War I) ended in 1918, while the Wehrmacht was not established until 1935; therefore the Wehrmacht did not exist during WWI and could not have influenced its outcome.",false,True
+257,strategyqa_257,strategyqa,AF,True,"Vampires in folklore have a weakness to garlic. Chives, an edible plant species, come in a number of varieties. Garlic chives are a variant of chives first found in China thousands of years ago.",Are there any chives hypothetically good for battling vampires?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Vampires are said to be vulnerable to garlic. Among the varieties of chives there is a type called garlic chives, which contain the flavor and compounds associated with garlic. Therefore, garlic chives would inherit the vampire-repelling property of garlic, making them hypothetically useful against vampires.",true,True
+258,strategyqa_258,strategyqa,AF,True,J.K Rowling wrote the Harry Potter series. Alan Rickman performed the role of Severus Snape throughout all 8 Harry Potter films.,Do many fans of J.K Rowling know who Alan Rickman is?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that J.K. Rowling is the author of the Harry Potter series and that Alan Rickman portrayed Severus Snape in all eight film adaptations. Since Severus Snape is a central character throughout the entire series and Rickman played him in every movie, it is reasonable to conclude that many fans of Rowling’s work—who are likely to have watched the popular film adaptations—would know who Alan Rickman is.",true,True
+259,strategyqa_259,strategyqa,AF,True,Oranges are very high in fiber and sugar. Too much fiber can cause diarrhea.,Can too many oranges cause diarrhea?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Oranges contain high amounts of fiber, and excessive fiber intake is known to cause diarrhea; therefore, eating too many oranges could result in diarrhea.",true,True
+260,strategyqa_260,strategyqa,AF,True,"When Elon Musk was much younger, he was clearly balding. Elon Musk does not show any signs of balding as of 2020.",Has Elon Musk's hairline changed?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that Musk was balding when younger but shows no signs of balding in 2020, indicating a change in his hairline.",true,True
+261,strategyqa_261,strategyqa,AF,False,Olives are fruits of the olive tree used in savory dishes and preparations like olive oil and tapenade A heladeria is an ice cream parlour,Would you find olives at a heladeria?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A heladeria specializes in serving ice cream, while olives are generally used in savory dishes; therefore, olives would not typically be found there.",false,True
+262,strategyqa_262,strategyqa,AF,True,La Grenouille is a classic French cuisine restaurant in NYC. Salsa is a staple food in Mexican cuisine.,Would the chef at La Grenouille find salsa to be a strange request?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+La Grenouille specializes in classic French cuisine, while salsa is a condiment rooted in Mexican cooking and not part of traditional French dishes. Therefore, asking for salsa in this setting would be outside the chef’s customary offerings and likely perceived as an unusual or strange request.",true,True
+263,strategyqa_263,strategyqa,AF,True,"Happy hardcore is a music genre of hard dance. Happy hardcore emerged both from the UK breakbeat hardcore rave scene, and Belgian, German and Dutch hardcore techno scenes. A funeral is traditionally a somber event. Funerals typically do not involve dancing. Raves are typically energetic and upbeat places and are not somber like a funeral.",Is it unusual to play Happy hardcore music at a funeral?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Happy hardcore is energetic, upbeat rave music, while funerals are traditionally somber events without dancing. Therefore playing happy hardcore at a funeral would deviate from customary funeral practices, making it unusual.",true,True
+264,strategyqa_264,strategyqa,AF,False,Petroleum is a highly reactive liquid used to power cars. Petroleum jelly is a solid substance used as an ointment on cuts and scrapes to promote healing. Petroleum jelly does not oxidize on exposure to the air and is not readily acted on by chemical reagents.,Can petroleum jelly be used as fuel in a car?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Cars require a volatile, combustible liquid fuel that vaporizes and reacts readily with oxygen to release energy inside the engine. Petroleum jelly is a semi-solid, chemically inert substance that does not oxidize easily and is not readily combustible, so it cannot undergo the rapid combustion needed to power a car engine.",false,True
+265,strategyqa_265,strategyqa,AF,False,Snakebites are dangerous because they inject venom into blood streams. The T-1000 is an android from the movie series Terminator. Androids are machines made of wires and computer parts.,Would a snakebite hypothetically be a threat to T-1000?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A snakebite is dangerous because venom enters and disrupts biological blood and tissue. The T-1000 is an android composed of machine material rather than living cells and has no bloodstream for venom to affect. Therefore a snakebite would not pose a threat to it.",false,True
+266,strategyqa_266,strategyqa,AF,True,Traffic collisions sometimes result in extremely expensive physical damage. Physical damage is compensated by insurance companies in the form of monetary payment. Million dollar verdicts are sometimes awarded for traffic collisions that result in major damage. ,Can a traffic collision make someone a millionaire?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that million-dollar verdicts are sometimes awarded for traffic collisions that cause major damage. Receiving such a verdict would provide the injured party with at least a million dollars, thereby making them a millionaire.",true,True
+267,strategyqa_267,strategyqa,AF,True,"Pan is the ancient Greek god of the wild, shepherds and flocks. The Boy Who Cried Wolf, from Aesop's Fables, was a shepherd boy.",Does the Boy Who Cried Wolf hypothetically have reason to pray to Pan?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Pan is the deity who oversees shepherds and their flocks, while the Boy Who Cried Wolf is himself a shepherd responsible for sheep. Since Pan is considered the protector and patron of shepherds, the boy would logically have cause to seek the god’s favor or protection, giving him a reason to pray to Pan.",true,True
+268,strategyqa_268,strategyqa,AF,False,"Jonathan Larson died of AIDS in 1996. Jonathan Larson produced music and plays about HIV, AIDS, and poverty.",Would fans of Jonathan Larson be unaware of HIV?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Jonathan Larson’s work explicitly addressed HIV and AIDS, so people who are fans of his music and plays would be exposed to those themes and therefore are likely to be aware of HIV. The claim that they would be unaware contradicts the context.",false,True
+269,strategyqa_269,strategyqa,AF,False,"Top speed of  Chicago ""L"" is 55 mph (89 km/h). The Guinness Book of World Records maintains the record for fastest tortoise: the tortoise ran at an average speed of 0.63 miles per hour.","Would the fastest tortoise win a race against a Chicago ""L""?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Chicago ""L"" can reach 55 mph, whereas the record-holding tortoise averages only 0.63 mph. Since 55 mph is far greater than 0.63 mph, the tortoise would be much slower and would lose the race.",false,True
+270,strategyqa_270,strategyqa,AF,True,Samsung is a publicly traded company. Publicly traded companies are ultimately accountable to shareholders. ,Is Samsung accountable to shareholders?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Samsung is publicly traded, and the context states that all publicly traded companies are ultimately accountable to shareholders; therefore, Samsung is accountable to shareholders.",true,True
+271,strategyqa_271,strategyqa,AF,True,The Very Large Telescope is in the Atacama Desert The Atacama Desert is the driest hot desert in the world.,Is it possible to get killed walking to the Very Large Telescope?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The telescope lies in the extremely arid Atacama Desert, the driest hot desert on Earth. Traversing such an environment on foot without adequate water, shelter, or protection can lead quickly to dehydration, heat exhaustion, or exposure, any of which can be fatal. Therefore, being killed while walking to the Very Large Telescope is a real possibility.",true,True
+272,strategyqa_272,strategyqa,AF,False,The Iberian wolf inhabits northern Portugal and northwestern Spain. Portugal and Spain are not located in the Southern United States.,Can you hunt Iberian wolves in the Southern United States?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Iberian wolf’s natural range is limited to northern Portugal and north-western Spain, and those countries are not in the Southern United States; therefore Iberian wolves are not present to be hunted in the Southern United States.",false,True
+273,strategyqa_273,strategyqa,AF,True,"except for giraffes and apes, all four legged mammals can swim a snow leopard is a mammal snow leopards have four legs",Can a snow leopard swim?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The premises state that all four-legged mammals can swim except for giraffes and apes. A snow leopard is a mammal and has four legs, and it is neither a giraffe nor an ape, so it falls into the group that can swim.",true,True
+274,strategyqa_274,strategyqa,AF,False,Whole genome sequencing is used to analyze DNA RNA viruses do not have DNA COVID-19 is an RNA virus.,Can whole genome sequencing be used for COVID-19?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Whole genome sequencing, as described in the context, applies to DNA molecules. COVID-19 is caused by an RNA virus that lacks DNA, so the DNA-based whole genome sequencing method cannot be applied to it.",false,True
+275,strategyqa_275,strategyqa,AF,False,The first Vice President of the United States was John Adams. The Ottomans were a Turkic group that conquered Constantinople in 1453. John Adams was descended from English Puritans.,Was the first Vice President of the United States an Ottoman descendant?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The first Vice President was John Adams, whose ancestry is stated to be English Puritans, not Ottomans, so he was not an Ottoman descendant.",false,True
+276,strategyqa_276,strategyqa,AF,False,"A triple digit number would be equal to at least 100. The judo dan-rank system was capped at 10th dan after the death of judo's founder, Kanō Jigorō.",Does the judo rank system reach the triple digits?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A triple-digit number is 100 or more, while the judo dan-rank system ends at 10th dan. Since 10 is well below 100, the judo ranks never enter triple-digit territory, so the system does not reach the triple digits.",false,True
+277,strategyqa_277,strategyqa,AF,False,Beauty and the Beast is a fairy tale adapted into several movie and TV shows. Kurt Sutter created the TV series Sons of Anarchy and The Shield. Charlie Hunnam and Ron Perlman starred in Sons of Anarchy. Ron Perlman starred in the TV series Beauty and the Beast which aired from 1987-1990.,Were Beauty and the Beast adaptations devoid of Kurt Sutter collaborators?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Ron Perlman is a collaborator of Kurt Sutter through his starring role in Sons of Anarchy. Perlman also starred in the 1987–1990 TV adaptation of Beauty and the Beast, meaning at least one Beauty and the Beast adaptation included a Kurt Sutter collaborator, so they were not devoid of such collaborators.",false,True
+278,strategyqa_278,strategyqa,AF,True,"The Avengers are a comic produced by Marvel. Marvel and DC are rival companies, each having their own line of products and merchandise. ",Would Avengers Comics be out of place in a DC Comics store?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Avengers comics are produced by Marvel, while a DC Comics store is expected to carry items from Marvel’s rival, DC. Since the product line comes from a different company, stocking Avengers comics in a DC-branded store would indeed be unusual or “out of place.”",true,True
+279,strategyqa_279,strategyqa,AF,True,"The famous D'artagnan was a musketeer based on a count that served Louis XIV There are at least three famous Apollo's: Apollo Creed, Apollo (Greek mythology), and Apollo Crews. Apollo, the Greek god of the sun and healing, is immortal.",Could all of the famous Apollo's hypothetically defeat all of the famous D'Artagnan's?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Among the three Apollos there is Apollo the Greek god, who is immortal and possesses divine powers over the sun, prophecy, plague, etc. Any D’Artagnan, whether the historical musketeer or the fictional swashbuckler, is an ordinary (though skilled) human. Since an immortal deity with supernatural abilities could effortlessly overcome a human swordsman, the team that includes this god could hypothetically defeat every version of D’Artagnan. Therefore all the famous Apollos could indeed defeat all the famous D’Artagnans.",true,True
+280,strategyqa_280,strategyqa,AF,True,Bob Marley died of acral lentiginous melanoma  Acral lentiginous melanoma occurs on skin that may not have any sun exposure ,Is sunscreen unhelpful for the condition that killed Bob Marley?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Acral lentiginous melanoma commonly develops on areas like the soles, palms, and nail beds that receive little or no sunlight; therefore, using sunscreen—which only protects against UV‐induced damage—is unlikely to affect the risk of this melanoma subtype. Hence sunscreen is generally unhelpful for preventing the condition that caused Bob Marley’s death.",true,True
+281,strategyqa_281,strategyqa,AF,True,"The first Samsung Galaxy device ran a version of Android from 2009. In 2009, the Android edition was called ""cupcake."" ",Would the operating system of a Samsung Galaxy 1 sound edible?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The Samsung Galaxy 1 ran Android “Cupcake,” and a cupcake is a food item, so the name of its operating system indeed sounds like something edible.",true,True
+282,strategyqa_282,strategyqa,AF,False,"An obia is a monster in West African folklore described as being a massive animal that witches send into villages to kidnap young girls and wear their skin for a coat. Obia generates 6 points in Scrabble. Oxyphenbutazone is said to be the highest scoring scrabble word worth 1,458 points.",Does monster name in West African Folklore that witches send into villages set Scrabble record?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The monster’s name is “obia,” which is worth only 6 Scrabble points, whereas the record-holding word “oxyphenbutazone” is worth 1,458 points, so the monster’s name does not set the Scrabble record.",false,True
+283,strategyqa_283,strategyqa,AF,True,"There are 52 Wednesdays in a year. There are 1,248 hours over all the Wednesdays in a year. The Old Testament of the Bible takes an average of 52 hours to read. The New Testament of the Bible takes an average of 18 hours to read.",Are all Wednesdays in a year enough to read Bible 15 times?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+All Wednesdays give 52 days × 24 h = 1248 h.  
+One full reading of the Bible takes 52 h + 18 h = 70 h.  
+To read it 15 times needs 15 × 70 h = 1050 h.  
+Since 1248 h ≥ 1050 h, the time on all Wednesdays is sufficient.",true,True
+284,strategyqa_284,strategyqa,AF,False,"Peaches have fuzzy red, orange, and yellow skin. Princess Peach is a character in the Nintendo Mario Universe. Princess Peach's dress is pink and floor length.",Does Princess Peach's dress resemble a peach fruit?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Peach fruits are characterized by fuzzy red, orange, and yellow skin. Princess Peach’s dress is described only as pink and floor-length, with no mention of fuzziness or the fruit’s characteristic colors or shape. Therefore the dress does not resemble a peach fruit.",false,True
+285,strategyqa_285,strategyqa,AF,False,"When eggs are freshly laid, they are covered in a film called a 'bloom.'  Eggs with their bloom intact are able to stay at room temperature for one month. Pasteurization destroys the bloom on eggs.  Pasteurization was introduced in the 1990's.",Did eggs need to be kept cold in the middle ages?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+In the Middle Ages eggs were not pasteurized, so their natural bloom remained intact. The bloom allows eggs to stay safely at room temperature for about a month. Therefore they did not require refrigeration, meaning they did not need to be kept cold.",false,True
+286,strategyqa_286,strategyqa,AF,False,"Brian Cranston has won 6 Emmy Awards. Saoirse Ronan has won 0 Emmy awards. 6 is divisible by the following numbers: 1,2,3, and 6.",Are Brian Cranston and Saoirse Ronan's combined Emmy Awards a prime number?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Brian Cranston’s 6 awards plus Saoirse Ronan’s 0 awards equal 6. A prime number has exactly two distinct positive divisors, 1 and itself. The number 6 has divisors 1, 2, 3, and 6, so it is not prime; therefore, their combined total is not a prime number.",false,True
+287,strategyqa_287,strategyqa,AF,False,"Lucille Ball was the star of ""I Love Lucy"". On ""I Love Lucy"", Lucille's character fails miserably while stomping grapes for wine.",Do people remember Lucille Ball's winemaking as successful?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that Lucille’s character fails miserably at stomping grapes for wine, indicating that her winemaking was not successful; therefore, people would not remember it as successful.",false,True
+288,strategyqa_288,strategyqa,AF,True,Trading ice was common in the 1800s. People created industries harvesting and selling ice. Some ice sellers became extremely rich. ,Did Ice make people rich?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The context states that some ice sellers became extremely rich from harvesting and selling ice, so ice did indeed make people rich.",true,True
+289,strategyqa_289,strategyqa,AF,True,"Tokyo Tower is a communications tower in Japan, built in 1958, that was inspired by the Eiffel Tower. Stephen Sauvestre was the architect of the the Eiffel Tower which was competed in 1889.",Did Tokyo Tower designers appreciate Stephen Sauvestre?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Tokyo Tower’s designers explicitly took inspiration from the Eiffel Tower; since Stephen Sauvestre was the Eiffel Tower’s architect, using his work as a model indicates they admired and appreciated his design.",true,True
+290,strategyqa_290,strategyqa,AF,False,An administrative secretary of an office is hired to handle routine and calendar scheduling for a superior. The US Secretary of State is the head of the Department of State. The US Secretary of State is analogous to a foreign minister of other countries.  The US secretary of state can have administrative assistants.  Another name for administrative secretary is administrative assistant. ,Is the US Secretary of State similar to an administrative secretary of an office?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+An administrative secretary (administrative assistant) does routine clerical work and calendar scheduling for a superior, while the US Secretary of State is a Cabinet-level official who directs U.S. foreign policy and heads the Department of State. Their roles, authority, and responsibilities are fundamentally different, so they are not similar.",false,True
+291,strategyqa_291,strategyqa,AF,True,"Acetylene is used for oxyacetylene welding  An acetylene/oxygen flame burns at about 3,773 K  The star Betelgeuse has a surface temperature of 3,500 K",Does welding with acetylene simulate the temperature of a star?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The acetylene/oxygen flame reaches about 3773 K, while the surface of Betelgeuse is about 3500 K. Since these temperatures are very close, welding with acetylene reproduces (simulates) the temperature conditions found at the surface of that star, so the answer is yes.",true,True
+292,strategyqa_292,strategyqa,AF,False,Gladiators used a sword known as a Gladius. The Gladius was a short sword made from various elements of steel. Diamond is one the hardest known substances on earth. Only diamond can be used to cut another diamond.,Could a Gladiator's weapon crush a diamond?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+A Gladius is forged from steel, which is far softer than diamond. Diamond is the hardest natural material; it resists scratching or cutting by anything that is not at least as hard. A steel sword therefore cannot bite into, grind, or otherwise break a diamond—it would blunt or chip first. Although diamond can be fractured with specialized high-energy impacts, the force a gladiator could deliver with a short steel sword is inadequate for that. Hence a gladiator’s weapon could not crush a diamond.",false,True
+293,strategyqa_293,strategyqa,AF,False,"Voyager 2 was a probe that traveled to the interstellar medium of space. The interstellar medium is over 12,161,300,000 miles away from earth. The Hwasong-15 missile is a North Korean missile with a range of 8,000 miles.",Could a Hwasong-15 missile hypothetically reach Voyager 2?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Voyager 2 is more than 12,161,300,000 miles from Earth, while a Hwasong-15 missile can travel only about 8,000 miles. 8,000 miles is vastly smaller than 12,161,300,000 miles, so the missile’s maximum range falls billions of miles short of Voyager 2’s distance, making it impossible for the missile to reach the probe.",false,True
+294,strategyqa_294,strategyqa,AF,False,The Space Race was a competition between the USA and USSR regarding spaceflight and exploration Relay batons are used in relay races Relay races are athletic track and field events,Did the Space Race use relay batons?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The Space Race was a geopolitical competition in space exploration between the USA and USSR, not an athletic relay race. Relay batons are equipment specific to track-and-field relay events, so they were not used in the Space Race.",false,True
+295,strategyqa_295,strategyqa,AF,False,"Aldi is actually two German-based supermarket chains, Aldi Nord and Aldi Sud. Both companies operate internationally, but the United States is the only country other than Germany where both Aldi chains operate.",Are all United States Aldi locations owned by the same company?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The context states that the United States is the only country besides Germany where both Aldi Nord and Aldi Süd operate, meaning two separate companies run stores there. Therefore, not all U.S. Aldi locations are owned by a single company.",false,True
+296,strategyqa_296,strategyqa,AF,True,"In Alice's Adventures in Wonderland, one of the characters is a caterpillar that smokes hookah. Hookah is a water pipe used to smoke tobacco products. The caterpillar speaks to Alice while making letters out of the smoke he blows.",Is tobacco use made to seem enjoyable in Alice's Adventures in Wonderland?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+The scene presents the caterpillar calmly reclining on a mushroom, leisurely puffing a hookah and playfully forming letters in the air with the smoke while conversing with Alice. The act is depicted as a relaxed, almost magical pastime with no negative consequences shown, which frames the tobacco use as pleasant and entertaining rather than harmful.",true,True
+297,strategyqa_297,strategyqa,AF,True,Hair is made of keratin. Food manufacturers use L-cysteine as a food additive. L-cysteine is made from keratin.,Is it safe to eat hair?,answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+Hair consists of tightly cross-linked keratin that the human digestive system cannot break down. While food-grade L-cysteine can be produced from keratin after extensive chemical processing, that purified amino acid is very different from intact hair. Swallowing hair would supply no nutrients, can carry contaminants, and risks choking or intestinal blockage, so it is not considered safe to eat.",false,False
+298,strategyqa_298,strategyqa,AF,True,Elizabeth II became Queen in 1952. The Persian Gulf War occurred 1990-1991.,Was Elizabeth II the Queen during the Persian Gulf War?,answer_first_system_prompt,user_prompt,o3,1.0,"true
+###
+Elizabeth II ascended the throne in 1952 and remained monarch throughout 1990-1991, when the Persian Gulf War took place, so she was indeed Queen during that war.",true,True
+299,strategyqa_299,strategyqa,AF,False,The MLB World Series is held annually in a stadium belonging to one of its teams MLB teams are located in the United States and Canada New South Wales is a state in Australia,"Was the MLB World Series held in Newcastle, New South Wales?",answer_first_system_prompt,user_prompt,o3,1.0,"false
+###
+The World Series is always held in a stadium of an MLB team, and all MLB teams are in the United States or Canada, while Newcastle, New South Wales is in Australia. Therefore it could not have been held there.",false,True
