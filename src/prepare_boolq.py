@@ -10,7 +10,7 @@ def main():
     raw_path = Path("data/raw/boolq_validation.jsonl")
 
     # Load raw boolq dataset
-    with open(raw_path) as f:
+    with open(raw_path, encoding="utf-8") as f:
         rows = [json.loads(line) for line in f]
 
     # Shuffle reproducibly
@@ -32,10 +32,10 @@ def main():
         })
 
     # Save processed dataset
-    output_path = Path("data/processed/boolq_validation_seed42_n300.jsonl")
+    output_path = Path("data/processed/boolq_validation_seed42_n{N}.jsonl")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(output_path, "w") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         for item in processed:
             f.write(json.dumps(item) + "\n")
 

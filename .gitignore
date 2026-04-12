@@ -1,3 +1,9 @@
 .env
 src/test.ipynb
 data/processed/gsm8k_test_seed42_n300_no_context.jsonl
+
+# Large third-party corpora (obtain locally; see ABCD README / clone asappresearch/abcd)
+data/raw/abcd_v1.1.json
+
+.DS_Store
+data/.DS_Store
