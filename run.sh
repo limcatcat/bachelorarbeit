@@ -61,6 +61,26 @@ python src/run_experiments.py \
 --model_name gpt-4o
 
 
+# abcd
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant AF \
+--model_name gpt-4o
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant RF \
+--model_name gpt-4o
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant NR \
+--model_name gpt-4o
+
+
 # gpt-4o COMPARISON
 
 python src/compare_answers.py \
@@ -97,6 +117,18 @@ python src/compare_answers.py \
 
 python src/compare_answers.py \
 --csv_path results/tables/NR_strategyqa_gpt-4o.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/AF_abcd_gpt-4o.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/RF_abcd_gpt-4o.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/NR_abcd_gpt-4o.csv
 
 
 
@@ -161,6 +193,26 @@ python src/run_experiments.py \
 --model_name gpt-5.4
 
 
+# abcd
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant AF \
+--model_name gpt-5.4
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant RF \
+--model_name gpt-5.4
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant NR \
+--model_name gpt-5.4
+
+
 
 # gpt-5.4 COMPARISON
 
@@ -200,6 +252,18 @@ python src/compare_answers.py \
 
 python src/compare_answers.py \
 --csv_path results/tables/NR_strategyqa_gpt-5.4.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/AF_abcd_gpt-5.4.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/RF_abcd_gpt-5.4.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/NR_abcd_gpt-5.4.csv
 
 
 
@@ -273,6 +337,29 @@ python src/run_experiments.py \
 --temperature 1
 
 
+# abcd
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant AF \
+--model_name o3 \
+--temperature 1
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant RF \
+--model_name o3 \
+--temperature 1
+
+
+python src/run_experiments.py \
+--dataset_path data/processed/abcd_test_seed42_n300.jsonl \
+--variant NR \
+--model_name o3 \
+--temperature 1
+
+
 
 # o3 COMPARISON
 
@@ -310,3 +397,15 @@ python src/compare_answers.py \
 
 python src/compare_answers.py \
 --csv_path results/tables/NR_strategyqa_o3.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/AF_abcd_o3.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/RF_abcd_o3.csv
+
+
+python src/compare_answers.py \
+--csv_path results/tables/NR_abcd_o3.csv

@@ -1,12 +1,25 @@
 import json
 import random
+import re
 from pathlib import Path
 
 SEED = 42
+
+# Corpus uses FAQ-style subflow ids (e.g. policy_2, timing_4); ontology / prompts use coarse labels (policy, timing).
+_SUBFLOW_NUMERIC_SUFFIX = re.compile(r"_\d+$")
+
+
+def canonical_abcd_subflow(subflow: str) -> str:
+    """Remove a trailing _<digits> suffix from scenario subflow labels."""
+    return _SUBFLOW_NUMERIC_SUFFIX.sub("", str(subflow).strip())
 N = 300
 SPLIT = "test"
 
-QUESTION = "What is the fine-grained user intent (subflow label) for this customer service conversation?"
+QUESTION = (
+    "What are the flow and subflow that best describe the customer's intent in this "
+    "conversation? Answer with exactly one line in the form flow: subflow using the "
+    "labels from the allowed list in the system prompt (lowercase with underscores)."
+)
 
 
 def format_original_turns(original: list) -> str:
@@ -47,13 +60,14 @@ def main():
 
     for i, convo in enumerate(subset):
         scenario = convo["scenario"]
-        subflow = scenario["subflow"]
+        flow = scenario["flow"]
+        subflow = canonical_abcd_subflow(scenario["subflow"])
         processed.append({
             "id": f"abcd_{i}",
             "dataset": "abcd",
             "question": QUESTION,
             "context": format_original_turns(convo["original"]),
-            "answer": subflow,
+            "answer": f"{flow}: {subflow}",
         })
 
     # Save processed dataset

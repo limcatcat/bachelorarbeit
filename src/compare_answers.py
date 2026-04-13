@@ -5,6 +5,14 @@ import argparse
 
 DELIMITER = "###"
 
+# ABCD FAQ disambiguators on subflows (e.g. policy_2, timing_4) vs coarse labels (policy, timing).
+_ABCD_SUBFLOW_NUMERIC_SUFFIX = re.compile(r"_\d+$")
+
+
+def _abcd_strip_faq_suffix(label: str) -> str:
+    return _ABCD_SUBFLOW_NUMERIC_SUFFIX.sub("", label.strip())
+
+
 def extract_llm_answer(llm_response: str, variant: str, delimiter: str = DELIMITER) -> str:
     """
     Extract the final answer from llm_response based on the prompt variant.
@@ -34,7 +42,7 @@ def extract_llm_answer(llm_response: str, variant: str, delimiter: str = DELIMIT
     raise ValueError(f"Unknown variant: {variant}")
 
 
-def normalize_answer(answer: str) -> str:
+def normalize_answer(answer: str, dataset: str | None = None) -> str:
     """
     Normalize answers for comparison.
     - strip whitespace
@@ -42,6 +50,9 @@ def normalize_answer(answer: str) -> str:
     - collapse repeated spaces
     - remove surrounding punctuation/newlines
     - normalize simple numeric formats like '36.0' -> '36'
+    - for dataset abcd, canonicalize flow: subflow spacing and strip trailing
+      _<digits> from the subflow (or from the whole string if there is no colon),
+      so policy_2 matches policy and storewide_query: policy_2 matches storewide_query: policy
     """
 
     if pd.isna(answer) or str(answer).strip() == "":
@@ -60,11 +71,24 @@ def normalize_answer(answer: str) -> str:
             return str(int(num))
         return str(num)
 
+    if dataset == "abcd":
+        if ":" in text:
+            left, right = text.split(":", 1)
+            flow = left.strip()
+            sub = _abcd_strip_faq_suffix(right)
+            text = f"{flow}: {sub}"
+        else:
+            text = _abcd_strip_faq_suffix(text)
+
     return text
 
 
-def compare_answers(expected_answer: str, llm_answer: str) -> bool:
-    return normalize_answer(expected_answer) == normalize_answer(llm_answer)
+def compare_answers(
+    expected_answer: str, llm_answer: str, dataset: str | None = None
+) -> bool:
+    return normalize_answer(expected_answer, dataset) == normalize_answer(
+        llm_answer, dataset
+    )
 
 
 def add_answer_comparison_to_df(df: pd.DataFrame) -> pd.DataFrame:
@@ -88,7 +112,11 @@ def add_answer_comparison_to_df(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     result_df["answer_match"] = result_df.apply(
-        lambda row: compare_answers(row["expected_answer"], row["llm_answer"]),
+        lambda row: compare_answers(
+            row["expected_answer"],
+            row["llm_answer"],
+            str(row["dataset"]) if pd.notna(row["dataset"]) else None,
+        ),
         axis=1,
     )
 

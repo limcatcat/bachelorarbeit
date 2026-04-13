@@ -1,13 +1,45 @@
+from abcd_prompts import ABCD_VARIANT_PROMPT_NAMES, get_flow_subflow_pairs_block
 from fetch_prompts import fetch_prompts
 from langfuse.openai import openai
 from langfuse import observe, propagate_attributes
+from openai import RateLimitError
 from pathlib import Path
+import argparse
+import random
+import re
+import time
+
 import pandas as pd
 from dotenv import load_dotenv
-import argparse
 from utils import load_jsonl, save_jsonl, get_unique_path
 
 load_dotenv()
+
+_MAX_RATE_LIMIT_RETRIES = 15
+_RETRY_AFTER_MS = re.compile(r"try again in ([\d.]+)\s*ms", re.IGNORECASE)
+
+
+def _sleep_for_rate_limit(exc: RateLimitError, attempt: int) -> None:
+    msg = str(exc)
+    m = _RETRY_AFTER_MS.search(msg)
+    if m:
+        delay = float(m.group(1)) / 1000.0 + 0.1
+    else:
+        delay = min(120.0, (2 ** min(attempt, 10)) * 0.5)
+    delay += random.uniform(0, 0.3)
+    print(f"Rate limited (429); sleeping {delay:.2f}s before retry {attempt + 2}/{_MAX_RATE_LIMIT_RETRIES}")
+    time.sleep(delay)
+
+
+def _chat_completions_create_with_retry(**kwargs):
+    for attempt in range(_MAX_RATE_LIMIT_RETRIES):
+        try:
+            return openai.chat.completions.create(**kwargs)
+        except RateLimitError as e:
+            if attempt == _MAX_RATE_LIMIT_RETRIES - 1:
+                raise
+            _sleep_for_rate_limit(e, attempt)
+    raise RuntimeError("chat completion retry loop exited unexpectedly")
 
 @observe(name="qa_execution")
 def execute_qa(
@@ -18,6 +50,7 @@ def execute_qa(
         model_name: str,
         temperature: float,
         output_name: str,
+        abcd_system_prompt_vars: dict[str, str] | None = None,
 ) -> dict:
        
     VARIANT_DICT = {
@@ -25,15 +58,28 @@ def execute_qa(
         "RF": "reasoning_first_system_prompt",
         "NR": "no_reasoning_system_prompt",
     }
-     
+
     context = row["context"]
     question = row["question"]
 
+    if row.get("dataset") == "abcd":
+        system_prompt_name = ABCD_VARIANT_PROMPT_NAMES[variant]
+        system_prompt_content = None
+        if abcd_system_prompt_vars is None:
+            raise ValueError("abcd_system_prompt_vars is required when dataset is abcd")
+        system_prompt_compile_kwargs = abcd_system_prompt_vars
+    else:
+        system_prompt_name = VARIANT_DICT[variant]
+        system_prompt_content = None
+        system_prompt_compile_kwargs = None
+
     system_prompt, user_prompt = fetch_prompts(
-        system_prompt_name=VARIANT_DICT[variant],
+        system_prompt_name=system_prompt_name,
         user_prompt_name="user_prompt",
         context=context,
         question=question,
+        system_prompt_content=system_prompt_content,
+        system_prompt_compile_kwargs=system_prompt_compile_kwargs,
     )
 
     with propagate_attributes(
@@ -47,7 +93,7 @@ def execute_qa(
             "temperature": str(temperature),
         },
     ):
-        response = openai.chat.completions.create(
+        response = _chat_completions_create_with_retry(
             model=model_name,
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -66,7 +112,7 @@ def execute_qa(
             "expected_answer": row.get("answer"),
             "context": context,
             "question": question,
-            "system_prompt_name": VARIANT_DICT[variant],
+            "system_prompt_name": system_prompt_name,
             "user_prompt_name": "user_prompt",
             "model_name": model_name,
             "temperature": temperature,
@@ -86,6 +132,12 @@ def run_experiment(
         
     data = load_jsonl(dataset_path)
 
+    abcd_system_prompt_vars = None
+    if data and data[0].get("dataset") == "abcd":
+        abcd_system_prompt_vars = {
+            "flow_subflow_pairs": get_flow_subflow_pairs_block(),
+        }
+
     results = []
 
     dataset_name = Path(dataset_path).stem.split("_")[0]
@@ -103,6 +155,7 @@ def run_experiment(
             model_name=model_name,
             temperature=temperature,
             output_name=output_name,
+            abcd_system_prompt_vars=abcd_system_prompt_vars,
         )
 
         results.append(result_row)
