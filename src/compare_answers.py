@@ -6,11 +6,11 @@ import argparse
 DELIMITER = "###"
 
 # ABCD FAQ disambiguators on subflows (e.g. policy_2, timing_4) vs coarse labels (policy, timing).
-_ABCD_SUBFLOW_NUMERIC_SUFFIX = re.compile(r"_\d+$")
+_ABCD_SUBFLOW_SUFFIX = re.compile(r"(_(how|other))?_\d+$")
 
 
 def _abcd_strip_faq_suffix(label: str) -> str:
-    return _ABCD_SUBFLOW_NUMERIC_SUFFIX.sub("", label.strip())
+    return _ABCD_SUBFLOW_SUFFIX.sub("", label.strip())
 
 
 def extract_llm_answer(llm_response: str, variant: str, delimiter: str = DELIMITER) -> str:
@@ -51,7 +51,7 @@ def normalize_answer(answer: str, dataset: str | None = None) -> str:
     - remove surrounding punctuation/newlines
     - normalize simple numeric formats like '36.0' -> '36'
     - for dataset abcd, canonicalize flow: subflow spacing and strip trailing
-      _<digits> from the subflow (or from the whole string if there is no colon),
+      _<digits>/_how_<digits>/_other_<digits> from the subflow (or from the whole string if there is no colon),
       so policy_2 matches policy and storewide_query: policy_2 matches storewide_query: policy
     """
 

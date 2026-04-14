@@ -5,13 +5,12 @@ from pathlib import Path
 
 SEED = 42
 
-# Corpus uses FAQ-style subflow ids (e.g. policy_2, timing_4); ontology / prompts use coarse labels (policy, timing).
-_SUBFLOW_NUMERIC_SUFFIX = re.compile(r"_\d+$")
+_SUBFLOW_SUFFIX = re.compile(r"(?:_(?:how|other)(?:_\d+)?|_\d+)$")
 
 
 def canonical_abcd_subflow(subflow: str) -> str:
-    """Remove a trailing _<digits> suffix from scenario subflow labels."""
-    return _SUBFLOW_NUMERIC_SUFFIX.sub("", str(subflow).strip())
+    """Remove a trailing _<digits>/_how_<digits>/_other_<digits> suffix from scenario subflow labels."""
+    return _SUBFLOW_SUFFIX.sub("", str(subflow).strip())
 N = 300
 SPLIT = "test"
 
